@@ -7,11 +7,11 @@
 
 
 //ALU operations definitions
-`define ALU_NONE 3'b0
-`define ALU_ADD  3'b1
-`define ALU_MUL  3'b2
-`define ALU_DIV  3'b3
-`define ALU_MOD  3'b4
+`define ALU_NONE 3'b000
+`define ALU_ADD  3'b001
+`define ALU_MUL  3'b010
+`define ALU_DIV  3'b011
+`define ALU_MOD  3'b100
 
 
 

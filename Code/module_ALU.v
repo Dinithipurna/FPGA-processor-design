@@ -1,3 +1,6 @@
+`include "define.v"
+
+
 module ALU(bus_out,w_en,alu_op,clk,inc,rst,d_out);
 
 input  clk,w_en,inc,rst;
@@ -5,7 +8,7 @@ input  clk,w_en,inc,rst;
 input  [2:0] alu_op;
 input  [7:0] bus_out;
 
-output [7:0] reg d_out=8'd0;
+output reg [7:0]  d_out= 8'd0;
 
 always @(posedge clk)
 
@@ -13,26 +16,26 @@ always @(posedge clk)
 	
 		case(alu_op)
 				begin
-					3'b000:
+					`ALU_NONE:
 						begin
 							if (w_en==1)   d_out <= bus_out;
 							else if (inc==1)  d_out <= d_out+1;
 							else if (rst==1)   d_out <= 8'd0;
 						end
-					3'b001:
+					`ALU_ADD:
 						d_out <= d_out + bus_out;
-					3'b010:
+					`ALU_MUL:
 						d_out <= d_out * bus_out;
-					3'b011:
+					`ALU_DIV:
 						d_out <= d_out / bus_out;
-					3'b100:
+					`ALU_MOD:
 						d_out <= d_out % bus_out;
 						
 						
 					default:
 						d_out<=d_out;
 				end
-			endcase
+		endcase
 	end
 	
 endmodule

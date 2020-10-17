@@ -4,7 +4,7 @@ module RP_CP(Wen, BusOut, Clk, RST, INC, dout, rbase);
   output reg[7:0] dout = 8'd0, rbase = 8'd0;
   always @(posedge Clk)
     begin
-        if  (Wen && rbase == 8'd0) 
+        if  ( (Wen) && (dout == 8'd0) )
             begin
                 rbase <= BusOut;
                 dout <= BusOut;

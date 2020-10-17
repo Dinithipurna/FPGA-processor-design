@@ -52,3 +52,11 @@ set_global_assignment -name VERILOG_FILE IRAM.v
 set_global_assignment -name VERILOG_FILE Control_Unit.v
 set_global_assignment -name VERILOG_FILE IRAMv2.v
 set_global_assignment -name VERILOG_FILE define.v
+set_global_assignment -name VERILOG_FILE ALU.v
+set_global_assignment -name VERILOG_FILE BUS_MUX.v
+set_global_assignment -name QIP_FILE BUS_MUX.qip
+set_global_assignment -name QIP_FILE IRAMv2.qip
+set_global_assignment -name VERILOG_FILE Module_EOPC.v
+set_global_assignment -name VERILOG_FILE Module_Reg.v
+set_global_assignment -name VERILOG_FILE Module_RegF.v
+set_global_assignment -name VERILOG_FILE Module_RP_CP.v

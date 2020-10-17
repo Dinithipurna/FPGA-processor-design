@@ -1,3 +1,0 @@
-module ALU(bus_out,w_en,alu_op,clk,inc,rst,AC);
-
-input  clk,w_en, 

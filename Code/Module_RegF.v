@@ -1,11 +1,11 @@
-module RegF(Wen, BusOut, Clk, RST, INC, din, dout, z);
+module Module_RegF(Wen, BusOut, Clk, RST, INC, din, dout, z);
   input Wen, Clk, RST, INC;
   input[7:0] BusOut, din;
   output reg z=1;
   output reg [7:0] dout = 8'd0;
   always @(dout)
 	begin
-		if(din < dout) z <=1;
+		if(din > dout) z <=1;         //For MC and MV we can use the negation of Z
 		else z <=0;
 	end
   always @(posedge Clk)

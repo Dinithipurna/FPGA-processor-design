@@ -41,7 +41,7 @@
 
 
 //BUS Select Definitions
-`define BS_MOUT	4'b0000
+`define BS_MEMOUT	4'b0000
 `define BS_ADDR   4'b0001
 `define BS_MULR	4'b0010
 `define BS_WV		4'b0011
@@ -55,6 +55,11 @@
 `define BS_GSP		4'b1011
 `define BS_STP		4'b1100
 
+
+//MEM Definition
+`define MEM_IDLE		2'b00
+`define MEM_WRITE		2'b01
+`define MEM_READ		2'b10
 
 
 

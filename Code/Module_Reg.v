@@ -1,4 +1,4 @@
-module Reg(Wen, BusOut, Clk, RST, INC, dout);
+module Module_Reg(Wen, BusOut, Clk, RST, INC, dout);
   input Wen, Clk, RST, INC;
   input[7:0] BusOut;
   output reg [7:0] dout = 8'd0;

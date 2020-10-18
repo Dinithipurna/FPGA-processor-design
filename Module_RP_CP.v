@@ -1,7 +1,8 @@
-module RP_CP(Wen, BusOut, Clk, RST, INC, dout, rbase);
+module RP_CP(Wen, BusOut, Clk, RST, INC, dout);
   input Wen, Clk, RST, INC;
   input[7:0] BusOut;
-  output reg[7:0] dout = 8'd0, rbase = 8'd0;
+  output reg[7:0] dout = 8'd0; 
+  reg[7:0] rbase = 8'd0;
   always @(posedge Clk)
     begin
         if  ( (Wen) && (dout == 8'd0) )

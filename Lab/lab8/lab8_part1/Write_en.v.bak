@@ -1,0 +1,11 @@
+module Write_en(en,clk,out2);
+	input [4:0] en;
+	input clk;
+	output [4:0] out2;
+	
+	always @ (posedge clk); 
+	begin
+		out2<= en;
+		end	
+endmodule
+	

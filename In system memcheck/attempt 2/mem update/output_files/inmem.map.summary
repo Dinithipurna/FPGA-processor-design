@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Oct 20 10:41:04 2020
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : inmem
+Top-level Entity Name : wrapper
+Family : Cyclone IV E
+Total logic elements : 224
+    Total combinational functions : 193
+    Dedicated logic registers : 131
+Total registers : 131
+Total pins : 9
+Total virtual pins : 0
+Total memory bits : 2,048
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

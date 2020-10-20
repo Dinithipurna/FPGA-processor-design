@@ -1,0 +1,4 @@
+module addr_counter(address,clk,out);
+	input [4:0] address;
+	input clk;
+	output [4:0] out;

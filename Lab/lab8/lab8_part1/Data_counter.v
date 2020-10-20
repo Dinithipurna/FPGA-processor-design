@@ -1,0 +1,10 @@
+module Data_counter(DataIn,clk,out1);
+	input [3:0] DataIn;
+	input clk;
+	output reg[3:0] out1;
+	
+	always @ (posedge clk) begin
+		out1<= DataIn;
+		end	
+endmodule
+	

@@ -4,19 +4,31 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "q[0]",
+					"name" : "display[0]",
 					"strict" : false
 				},
 				{
-					"name" : "q[1]",
+					"name" : "display[1]",
 					"strict" : false
 				},
 				{
-					"name" : "q[2]",
+					"name" : "display[2]",
 					"strict" : false
 				},
 				{
-					"name" : "q[3]",
+					"name" : "display[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display[6]",
 					"strict" : false
 				},
 				{
@@ -24,63 +36,47 @@
 					"strict" : false
 				},
 				{
-					"name" : "clock",
+					"name" : "data_in[0]",
 					"strict" : false
 				},
 				{
-					"name" : "data[0]",
+					"name" : "waddr[0]",
 					"strict" : false
 				},
 				{
-					"name" : "wraddress[0]",
+					"name" : "waddr[1]",
 					"strict" : false
 				},
 				{
-					"name" : "wraddress[1]",
+					"name" : "waddr[2]",
 					"strict" : false
 				},
 				{
-					"name" : "wraddress[2]",
+					"name" : "waddr[3]",
 					"strict" : false
 				},
 				{
-					"name" : "wraddress[3]",
+					"name" : "waddr[4]",
 					"strict" : false
 				},
 				{
-					"name" : "wraddress[4]",
+					"name" : "data_in[1]",
 					"strict" : false
 				},
 				{
-					"name" : "rdaddress[0]",
+					"name" : "data_in[2]",
 					"strict" : false
 				},
 				{
-					"name" : "rdaddress[1]",
+					"name" : "data_in[3]",
 					"strict" : false
 				},
 				{
-					"name" : "rdaddress[2]",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "rdaddress[3]",
-					"strict" : false
-				},
-				{
-					"name" : "rdaddress[4]",
-					"strict" : false
-				},
-				{
-					"name" : "data[1]",
-					"strict" : false
-				},
-				{
-					"name" : "data[2]",
-					"strict" : false
-				},
-				{
-					"name" : "data[3]",
+					"name" : "rst",
 					"strict" : false
 				}
 			]

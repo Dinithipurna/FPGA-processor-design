@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Oct 21 00:43:59 2020
+Analysis & Synthesis Status : Successful - Thu Oct 22 00:36:28 2020
 Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : part-4
-Top-level Entity Name : RAM1
+Top-level Entity Name : wrapper
 Family : Cyclone IV E
-Total logic elements : 0
-    Total combinational functions : 0
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 20
+Total logic elements : 72
+    Total combinational functions : 68
+    Dedicated logic registers : 42
+Total registers : 42
+Total pins : 19
 Total virtual pins : 0
 Total memory bits : 128
 Embedded Multiplier 9-bit elements : 0

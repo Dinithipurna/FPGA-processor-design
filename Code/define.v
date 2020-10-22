@@ -1,7 +1,39 @@
 //micro state definitions
 
 
-`define ENDOP 8'b0
+`define ENDOP 8'b000000 00
+`define FETCH_1 8'b000001 00
+`define FETCH_2 8'b000001 01
+`define NOP 8'b000010 00
+`define RSTALL 8'b000011 00
+`define RSTAC 8'b000100 00
+`define RSTADDR 8'b000101 00
+`define RSTGSP 8'b000110 00
+`define RSTMC 8'b000111 00
+`define RSTCP 8'b001000 00
+`define RSTRP 8'b001001 00
+`define INGSP 8'b001010 00
+`define INCAC 8'b001011 00
+`define INCCP 8'b001100 00
+`define INCRP 8'b001101 00
+`define INCMC 8'b001110 00
+`define LDADDR_1 8'b001111 00
+`define LDADDR_2 8'b001111 01
+`define LDAC_1 8'b010000 00
+`define LDAC_2 8'b010000 01
+`define LDMULR_1 8'b010001 00
+`define LDMULR_2 8'b010001 01
+`define LDRP_1 8'b010010 00
+`define LDRP_2 8'b010010 01
+`define LDCP_1 8'b010011 00
+`define LDCP_2 8'b010011 01
+`define STSP_1 8'b010100 00
+`define STSP_2 8'b010100 01
+
+
+
+
+
 
 
 

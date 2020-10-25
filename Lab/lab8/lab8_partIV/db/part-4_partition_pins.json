@@ -32,43 +32,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "wren",
+					"name" : "c[3]",
 					"strict" : false
 				},
 				{
-					"name" : "data_in[0]",
+					"name" : "c[1]",
 					"strict" : false
 				},
 				{
-					"name" : "waddr[0]",
-					"strict" : false
-				},
-				{
-					"name" : "waddr[1]",
-					"strict" : false
-				},
-				{
-					"name" : "waddr[2]",
-					"strict" : false
-				},
-				{
-					"name" : "waddr[3]",
-					"strict" : false
-				},
-				{
-					"name" : "waddr[4]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in[1]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in[2]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in[3]",
+					"name" : "c[2]",
 					"strict" : false
 				},
 				{
@@ -76,7 +48,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "rst",
+					"name" : "c[0]",
 					"strict" : false
 				}
 			]

@@ -15,7 +15,7 @@ module char_7_seg(c,display,clk);
 	 4'b0011: display=7'b0000110;
 	 4'b0100: display=7'b1001100;
 	 4'b0101: display=7'b0100100;
-	 4'b0101: display=7'b0100000;
+	 4'b0110: display=7'b0100000;
 	 4'b0111: display=7'b0001111;
 	 4'b1000: display=7'b0000000;
 	 4'b1001: display=7'b0000100;

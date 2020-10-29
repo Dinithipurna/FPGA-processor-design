@@ -10,10 +10,12 @@ module Control_Unit
 	output reg [13:0] WRT_en, INC_en,RST_en
 );
 
-	reg STATE = 8'd0;
+	reg [7:0] STATE = 8'd0;
+	reg[7:0] NXTSTATE=8'b0;
 	
-	always @(posedge clk)
+	always @(negedge clk)
 	begin
+	STATE<=NXTSTATE;
 	// x and z values are NOT treated as don't-care's
 	case(STATE)
 	
@@ -27,6 +29,8 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
+				
+				
 			end
 				
 				
@@ -50,6 +54,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_2;
 			end		
 		`FETCH_2:
 			begin
@@ -60,6 +65,7 @@ module Control_Unit
 				INC_en  <= 14'b00000000000001 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b00000000000010 ;
+				NXTSTATE<=INS;
 			end			
 		
 		`RSTALL:
@@ -71,6 +77,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'b11111111111111 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end
 		`RSTAC:
 			begin
@@ -81,6 +88,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'b10000000000000 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end		
 		`RSTADDR:
 			begin
@@ -91,6 +99,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'b01000000000000 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end		
 		`RSTGSP:
 			begin
@@ -101,6 +110,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'b00000000001000 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end		
 		`RSTMC:
 			begin
@@ -111,6 +121,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'b00000100000000 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end		
 		`RSTCP:
 			begin
@@ -121,6 +132,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'b00000000010000 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end		
 		`RSTRP:
 			begin
@@ -131,6 +143,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'b00000000001000 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end		
 		`INCGSP:
 			begin
@@ -141,6 +154,7 @@ module Control_Unit
 				INC_en  <= 14'b00000000000100 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 		`INCAC:
 			begin
@@ -151,6 +165,7 @@ module Control_Unit
 				INC_en  <= 14'b10000000000000 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 		`INCCP:
 			begin
@@ -161,6 +176,7 @@ module Control_Unit
 				INC_en  <= 14'b00000000010000 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 		`INCRP:
 			begin
@@ -171,6 +187,7 @@ module Control_Unit
 				INC_en  <= 14'b00000000001000 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 		`INCMC:
 			begin
@@ -181,6 +198,7 @@ module Control_Unit
 				INC_en  <= 14'b00000100000000 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 		`LDADDR_1:
 			begin
@@ -191,6 +209,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`LDADDR_2;
 			end		
 		`LDADDR_2:
 			begin
@@ -201,6 +220,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b01000000000000 ;
+				NXTSTATE<=`FETCH_1;	
 			end			
 		`LDAC_1:
 			begin
@@ -211,6 +231,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`LDAC_2;
 			end		
 		`LDAC_2:
 			begin
@@ -221,6 +242,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b10000000000000 ;
+				NXTSTATE<=`FETCH_1;
 			end		
 		`LDMULR_1:
 			begin
@@ -231,7 +253,8 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
-			end		
+				NXTSTATE<=`LDMULR_2;
+				end		
 		`LDMULR_2:
 			begin
 				ALU_OP <= `ALU_NONE;
@@ -241,6 +264,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b00100000000000 ;
+				NXTSTATE<=`FETCH_1;
 			end		
 		`LDRP_1:
 			begin
@@ -251,6 +275,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`LDRP_2;
 			end		
 		`LDRP_2:
 			begin
@@ -261,6 +286,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b00000000001000 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 		`LDCP_1:
 			begin
@@ -271,6 +297,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`LDCP_2;
 			end		
 		`LDCP_2:
 			begin
@@ -281,8 +308,9 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b00000000010000 ;
+				NXTSTATE<=`FETCH_1;
 			end	
-####	`STSP:
+		`STSP:
 			begin
 				ALU_OP <= `ALU_NONE;
 				Bus_Select <= `BS_AC;
@@ -291,16 +319,18 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 	   `ADD:
 			begin
 				ALU_OP <= `ALU_ADD;
-				Bus_Select <= `BS_MULR;
+				Bus_Select <= `BS_ADDR;
 				PCtrl  <= `P_GSP;
 				MEMCtrl <= `MEM_IDLE;
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 	   `MUL1:
 			begin
@@ -311,6 +341,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 	   `MUL2:
 			begin
@@ -321,6 +352,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 	   `DIV:
 			begin
@@ -331,6 +363,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 	   `MOD:
 			begin
@@ -341,6 +374,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 	   `MSTP:
 			begin
@@ -351,6 +385,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b00000000100000 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 	   `MRP:
 			begin
@@ -361,6 +396,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b00000000001000 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 	   `MCP:
 			begin
@@ -371,6 +407,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b00000000010000 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 	   `MWV:
 			begin
@@ -381,6 +418,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b00010000000000 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 	   `MEOPC:
 			begin
@@ -391,6 +429,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b00000010000000 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 	   `MADDR:
 			begin
@@ -401,6 +440,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b01000000000000 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 	   `MCID:
 			begin
@@ -411,6 +451,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b00000001000000 ;
+				NXTSTATE<=`FETCH_1;
 			end			
 	   `MMV:
 			begin
@@ -421,6 +462,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b00001000000000 ;
+				NXTSTATE<=`FETCH_1;
 			end
 
 		`MCIDAC:
@@ -432,6 +474,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b10000000000000 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 		`MRPAC:
 			begin
@@ -442,6 +485,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b10000000000000 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 		`MCPAC:
 			begin
@@ -452,6 +496,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b10000000000000 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 	
    	`JMPZ1Y_1:
@@ -463,6 +508,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b00000000000010 ;
+				NXTSTATE<=`JMPZ1Y_2;
 			end
 		`JMPZ1Y_2:
 			begin
@@ -473,6 +519,9 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b00000000000001 ;
+//				WRT_en  <= (14'd1 << `RO_PC) ;
+				NXTSTATE<=`FETCH_1;
+				
 			end		
 		`JMPZ1N_1:
 			begin
@@ -483,6 +532,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b00000000000010 ;
+				NXTSTATE<=`JMPZ1N_2;	
 			end
 		`JMPZ1N_2:
 			begin
@@ -493,6 +543,7 @@ module Control_Unit
 				INC_en  <= 14'b00000000000001 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end	
 		`JMPZ2Y_1:
 			begin
@@ -503,6 +554,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b00000000000010 ;
+				NXTSTATE<=`JMPZ2Y_2;
 			end
 		`JMPZ2Y_2:
 			begin
@@ -513,6 +565,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b00000000000001 ;
+				NXTSTATE<=`FETCH_1;
 			end		
 		`JMPZ2N_1:
 			begin
@@ -523,6 +576,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b00000000000010 ;
+				NXTSTATE<=`JMPZ2N_2;
 			end
 		`JMPZ2N_2:
 			begin
@@ -533,6 +587,7 @@ module Control_Unit
 				INC_en  <= 14'b00000000000001 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'd0 ;
+				NXTSTATE<=`FETCH_1;
 			end
 		`JMP_1:
 			begin
@@ -543,6 +598,7 @@ module Control_Unit
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
 				WRT_en  <= 14'b00000000000010 ;
+				NXTSTATE<=`JMP_2;
 			end
 		`JMP_2:
 			begin
@@ -552,7 +608,9 @@ module Control_Unit
 				MEMCtrl <= `MEM_IDLE;
 				INC_en  <= 14'd0 ;
 				RST_en  <= 14'd0 ;
-				WRT_en  <= 14'b00000000000001 ;	
+				WRT_en  <= 14'b00000000000001 ;
+				NXTSTATE<=`FETCH_1;
+			end
 	
 	endcase
 	

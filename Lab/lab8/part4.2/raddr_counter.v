@@ -3,19 +3,24 @@ module raddr_counter(clk,address);
 	output reg[4:0] address;
 	
 	reg [4:0] counter;
+
 	
-	initial begin
-		counter<=0;
-		end
-	
-	always @( posedge clk) begin
+	always @( negedge clk) 
+	begin
 		counter<=counter+1;
-		address<=counter;
+		//address<=counter;
 		
-		if (counter== 5'd31) begin
-			counter<=0;
-			end
+		//if (counter== 5'd31) begin
+			//counter<=0;
+			//end
 	end
+	
+	always @( negedge clk) 
+	begin
+		//counter<=counter+1;
+		address<=counter;
+		end
+		
 	
 	endmodule
 	

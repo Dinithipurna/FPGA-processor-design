@@ -1,0 +1,27 @@
+|check_reg
+Wen => dout.OUTPUTSELECT
+Wen => dout.OUTPUTSELECT
+Wen => dout.OUTPUTSELECT
+Wen => dout.OUTPUTSELECT
+BusOut[0] => dout.DATAB
+BusOut[1] => dout.DATAB
+BusOut[2] => dout.DATAB
+BusOut[3] => dout.DATAB
+Clk => dout[0]~reg0.CLK
+Clk => dout[1]~reg0.CLK
+Clk => dout[2]~reg0.CLK
+Clk => dout[3]~reg0.CLK
+RST => dout.OUTPUTSELECT
+RST => dout.OUTPUTSELECT
+RST => dout.OUTPUTSELECT
+RST => dout.OUTPUTSELECT
+INC => dout.OUTPUTSELECT
+INC => dout.OUTPUTSELECT
+INC => dout.OUTPUTSELECT
+INC => dout.OUTPUTSELECT
+dout[0] << dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] << dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] << dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] << dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

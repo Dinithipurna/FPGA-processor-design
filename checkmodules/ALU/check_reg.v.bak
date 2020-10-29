@@ -1,0 +1,12 @@
+module check_reg(clk,w_en,inc,rst,alu_op,dout);
+
+	input  clk,w_en,inc,rst;
+	input  [2:0] alu_op;
+	output reg [7:0]  dout= 8'd0;
+	
+	wire reg[7:0] busout;
+	
+	assigned assigned1(clk,dout,busout);
+	ALU ALU1(busout,w_en,alu_op,clk,inc,rst,dout);
+	
+endmodule

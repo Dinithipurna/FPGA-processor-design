@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processor
-Thu Oct 29 23:05:42 2020
+Fri Oct 30 13:27:19 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -67,15 +67,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 29 23:05:41 2020       ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 30 13:27:19 2020       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; Processor                                   ;
 ; Top-level Entity Name              ; Processor                                   ;
 ; Family                             ; Cyclone IV E                                ;
 ; Total logic elements               ; 875                                         ;
-;     Total combinational functions  ; 837                                         ;
-;     Dedicated logic registers      ; 363                                         ;
-; Total registers                    ; 363                                         ;
+;     Total combinational functions  ; 829                                         ;
+;     Dedicated logic registers      ; 377                                         ;
+; Total registers                    ; 377                                         ;
 ; Total pins                         ; 4                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 9,216                                       ;
@@ -263,18 +263,18 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Estimated Total logic elements              ; 875                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 837                      ;
+; Total combinational functions               ; 829                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 382                      ;
-;     -- 3 input functions                    ; 205                      ;
-;     -- <=2 input functions                  ; 250                      ;
+;     -- 4 input functions                    ; 372                      ;
+;     -- 3 input functions                    ; 218                      ;
+;     -- <=2 input functions                  ; 239                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 668                      ;
+;     -- normal mode                          ; 660                      ;
 ;     -- arithmetic mode                      ; 169                      ;
 ;                                             ;                          ;
-; Total registers                             ; 363                      ;
-;     -- Dedicated logic registers            ; 363                      ;
+; Total registers                             ; 377                      ;
+;     -- Dedicated logic registers            ; 377                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 4                        ;
@@ -284,8 +284,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 230                      ;
-; Total fan-out                               ; 4323                     ;
-; Average fan-out                             ; 3.44                     ;
+; Total fan-out                               ; 4376                     ;
+; Average fan-out                             ; 3.47                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -294,7 +294,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                   ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |Processor                                                                                                                              ; 837 (1)             ; 363 (0)                   ; 9216        ; 1            ; 1       ; 0         ; 4    ; 0            ; |Processor                                                                                                                                                                                                                                                                                                                                            ; Processor                         ; work         ;
+; |Processor                                                                                                                              ; 829 (1)             ; 377 (0)                   ; 9216        ; 1            ; 1       ; 0         ; 4    ; 0            ; |Processor                                                                                                                                                                                                                                                                                                                                            ; Processor                         ; work         ;
 ;    |DRAM:DRAM1|                                                                                                                         ; 60 (0)              ; 37 (0)                    ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|DRAM:DRAM1                                                                                                                                                                                                                                                                                                                                 ; DRAM                              ; work         ;
 ;       |altsyncram:altsyncram_component|                                                                                                 ; 60 (0)              ; 37 (0)                    ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|DRAM:DRAM1|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                                 ; altsyncram                        ; work         ;
 ;          |altsyncram_bel1:auto_generated|                                                                                               ; 60 (0)              ; 37 (0)                    ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|DRAM:DRAM1|altsyncram:altsyncram_component|altsyncram_bel1:auto_generated                                                                                                                                                                                                                                                                  ; altsyncram_bel1                   ; work         ;
@@ -307,12 +307,12 @@ https://fpgasoftware.intel.com/eula.
 ;             |altsyncram_tlb2:altsyncram1|                                                                                               ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|IRAM:IRAM1|altsyncram:altsyncram_component|altsyncram_8gl1:auto_generated|altsyncram_tlb2:altsyncram1                                                                                                                                                                                                                                      ; altsyncram_tlb2                   ; work         ;
 ;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 58 (36)             ; 37 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|IRAM:IRAM1|altsyncram:altsyncram_component|altsyncram_8gl1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                                        ; sld_mod_ram_rom                   ; work         ;
 ;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                     ; 22 (22)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|IRAM:IRAM1|altsyncram:altsyncram_component|altsyncram_8gl1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                                                     ; sld_rom_sr                        ; work         ;
-;    |TopRegisterWrapper:TRW1|                                                                                                            ; 493 (0)             ; 144 (0)                   ; 5120        ; 1            ; 1       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1                                                                                                                                                                                                                                                                                                                    ; TopRegisterWrapper                ; work         ;
-;       |ALU:ALUAC|                                                                                                                       ; 197 (52)            ; 8 (8)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|ALU:ALUAC                                                                                                                                                                                                                                                                                                          ; ALU                               ; work         ;
-;          |lpm_divide:Div0|                                                                                                              ; 79 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|ALU:ALUAC|lpm_divide:Div0                                                                                                                                                                                                                                                                                          ; lpm_divide                        ; work         ;
-;             |lpm_divide_nhm:auto_generated|                                                                                             ; 79 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|ALU:ALUAC|lpm_divide:Div0|lpm_divide_nhm:auto_generated                                                                                                                                                                                                                                                            ; lpm_divide_nhm                    ; work         ;
-;                |sign_div_unsign_fkh:divider|                                                                                            ; 79 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|ALU:ALUAC|lpm_divide:Div0|lpm_divide_nhm:auto_generated|sign_div_unsign_fkh:divider                                                                                                                                                                                                                                ; sign_div_unsign_fkh               ; work         ;
-;                   |alt_u_div_i4f:divider|                                                                                               ; 79 (78)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|ALU:ALUAC|lpm_divide:Div0|lpm_divide_nhm:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider                                                                                                                                                                                                          ; alt_u_div_i4f                     ; work         ;
+;    |TopRegisterWrapper:TRW1|                                                                                                            ; 485 (0)             ; 158 (0)                   ; 5120        ; 1            ; 1       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1                                                                                                                                                                                                                                                                                                                    ; TopRegisterWrapper                ; work         ;
+;       |ALU:ALUAC|                                                                                                                       ; 196 (53)            ; 8 (8)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|ALU:ALUAC                                                                                                                                                                                                                                                                                                          ; ALU                               ; work         ;
+;          |lpm_divide:Div0|                                                                                                              ; 77 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|ALU:ALUAC|lpm_divide:Div0                                                                                                                                                                                                                                                                                          ; lpm_divide                        ; work         ;
+;             |lpm_divide_nhm:auto_generated|                                                                                             ; 77 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|ALU:ALUAC|lpm_divide:Div0|lpm_divide_nhm:auto_generated                                                                                                                                                                                                                                                            ; lpm_divide_nhm                    ; work         ;
+;                |sign_div_unsign_fkh:divider|                                                                                            ; 77 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|ALU:ALUAC|lpm_divide:Div0|lpm_divide_nhm:auto_generated|sign_div_unsign_fkh:divider                                                                                                                                                                                                                                ; sign_div_unsign_fkh               ; work         ;
+;                   |alt_u_div_i4f:divider|                                                                                               ; 77 (76)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|ALU:ALUAC|lpm_divide:Div0|lpm_divide_nhm:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider                                                                                                                                                                                                          ; alt_u_div_i4f                     ; work         ;
 ;                      |add_sub_8pc:add_sub_1|                                                                                            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|ALU:ALUAC|lpm_divide:Div0|lpm_divide_nhm:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|add_sub_8pc:add_sub_1                                                                                                                                                                                    ; add_sub_8pc                       ; work         ;
 ;          |lpm_divide:Mod0|                                                                                                              ; 66 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|ALU:ALUAC|lpm_divide:Mod0                                                                                                                                                                                                                                                                                          ; lpm_divide                        ; work         ;
 ;             |lpm_divide_q9m:auto_generated|                                                                                             ; 66 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|ALU:ALUAC|lpm_divide:Mod0|lpm_divide_q9m:auto_generated                                                                                                                                                                                                                                                            ; lpm_divide_q9m                    ; work         ;
@@ -320,14 +320,14 @@ https://fpgasoftware.intel.com/eula.
 ;                   |alt_u_div_i4f:divider|                                                                                               ; 66 (66)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|ALU:ALUAC|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider                                                                                                                                                                                                          ; alt_u_div_i4f                     ; work         ;
 ;          |lpm_mult:Mult0|                                                                                                               ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|ALU:ALUAC|lpm_mult:Mult0                                                                                                                                                                                                                                                                                           ; lpm_mult                          ; work         ;
 ;             |mult_aat:auto_generated|                                                                                                   ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|ALU:ALUAC|lpm_mult:Mult0|mult_aat:auto_generated                                                                                                                                                                                                                                                                   ; mult_aat                          ; work         ;
-;       |BUS_MUX:BUS_MSelect|                                                                                                             ; 77 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|BUS_MUX:BUS_MSelect                                                                                                                                                                                                                                                                                                ; BUS_MUX                           ; work         ;
-;          |lpm_mux:LPM_MUX_component|                                                                                                    ; 77 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|BUS_MUX:BUS_MSelect|lpm_mux:LPM_MUX_component                                                                                                                                                                                                                                                                      ; lpm_mux                           ; work         ;
-;             |mux_3tc:auto_generated|                                                                                                    ; 77 (77)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|BUS_MUX:BUS_MSelect|lpm_mux:LPM_MUX_component|mux_3tc:auto_generated                                                                                                                                                                                                                                               ; mux_3tc                           ; work         ;
+;       |BUS_MUX:BUS_MSelect|                                                                                                             ; 74 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|BUS_MUX:BUS_MSelect                                                                                                                                                                                                                                                                                                ; BUS_MUX                           ; work         ;
+;          |lpm_mux:LPM_MUX_component|                                                                                                    ; 74 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|BUS_MUX:BUS_MSelect|lpm_mux:LPM_MUX_component                                                                                                                                                                                                                                                                      ; lpm_mux                           ; work         ;
+;             |mux_3tc:auto_generated|                                                                                                    ; 74 (74)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|BUS_MUX:BUS_MSelect|lpm_mux:LPM_MUX_component|mux_3tc:auto_generated                                                                                                                                                                                                                                               ; mux_3tc                           ; work         ;
 ;       |Control_Unit:Control_Unit1|                                                                                                      ; 57 (57)             ; 30 (30)                   ; 5120        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|Control_Unit:Control_Unit1                                                                                                                                                                                                                                                                                         ; Control_Unit                      ; work         ;
 ;          |altsyncram:WideOr9_rtl_0|                                                                                                     ; 0 (0)               ; 0 (0)                     ; 5120        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|Control_Unit:Control_Unit1|altsyncram:WideOr9_rtl_0                                                                                                                                                                                                                                                                ; altsyncram                        ; work         ;
 ;             |altsyncram_1401:auto_generated|                                                                                            ; 0 (0)               ; 0 (0)                     ; 5120        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|Control_Unit:Control_Unit1|altsyncram:WideOr9_rtl_0|altsyncram_1401:auto_generated                                                                                                                                                                                                                                 ; altsyncram_1401                   ; work         ;
-;       |Module_RP_CP:CPreg|                                                                                                              ; 21 (21)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|Module_RP_CP:CPreg                                                                                                                                                                                                                                                                                                 ; Module_RP_CP                      ; work         ;
-;       |Module_RP_CP:RPreg|                                                                                                              ; 21 (21)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|Module_RP_CP:RPreg                                                                                                                                                                                                                                                                                                 ; Module_RP_CP                      ; work         ;
+;       |Module_RP_CP:CPreg|                                                                                                              ; 19 (19)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|Module_RP_CP:CPreg                                                                                                                                                                                                                                                                                                 ; Module_RP_CP                      ; work         ;
+;       |Module_RP_CP:RPreg|                                                                                                              ; 19 (19)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|Module_RP_CP:RPreg                                                                                                                                                                                                                                                                                                 ; Module_RP_CP                      ; work         ;
 ;       |Module_Reg:ADDRreg|                                                                                                              ; 9 (9)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|Module_Reg:ADDRreg                                                                                                                                                                                                                                                                                                 ; Module_Reg                        ; work         ;
 ;       |Module_Reg:EOPCreg|                                                                                                              ; 9 (9)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|Module_Reg:EOPCreg                                                                                                                                                                                                                                                                                                 ; Module_Reg                        ; work         ;
 ;       |Module_Reg:GSPreg|                                                                                                               ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|TopRegisterWrapper:TRW1|Module_Reg:GSPreg                                                                                                                                                                                                                                                                                                  ; Module_Reg                        ; work         ;
@@ -420,12 +420,12 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 363   ;
+; Total registers                              ; 377   ;
 ; Number of registers using Synchronous Clear  ; 38    ;
-; Number of registers using Synchronous Load   ; 32    ;
+; Number of registers using Synchronous Load   ; 48    ;
 ; Number of registers using Asynchronous Clear ; 132   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 227   ;
+; Number of registers using Clock Enable       ; 243   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -474,8 +474,8 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Processor|TopRegisterWrapper:TRW1|Module_Reg:WVreg|dout[2]                                                                                                                       ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Processor|TopRegisterWrapper:TRW1|Module_Reg:PCreg|dout[6]                                                                                                                       ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Processor|TopRegisterWrapper:TRW1|Module_Reg:IRreg|dout[6]                                                                                                                       ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |Processor|TopRegisterWrapper:TRW1|Module_RP_CP:RPreg|dout[2]                                                                                                                     ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |Processor|TopRegisterWrapper:TRW1|Module_RP_CP:CPreg|dout[1]                                                                                                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Processor|TopRegisterWrapper:TRW1|Module_RP_CP:RPreg|dout[2]                                                                                                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Processor|TopRegisterWrapper:TRW1|Module_RP_CP:CPreg|dout[1]                                                                                                                     ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Processor|TopRegisterWrapper:TRW1|Module_Reg:ADDRreg|dout[2]                                                                                                                     ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Processor|IRAM:IRAM1|altsyncram:altsyncram_component|altsyncram_8gl1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[2] ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Processor|DRAM:DRAM1|altsyncram:altsyncram_component|altsyncram_bel1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4] ;
@@ -925,30 +925,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 58                          ;
-; cycloneiii_ff         ; 251                         ;
+; cycloneiii_ff         ; 265                         ;
 ;     CLR               ; 43                          ;
-;     ENA               ; 104                         ;
+;     ENA               ; 120                         ;
 ;     ENA CLR           ; 14                          ;
 ;     ENA CLR SLD       ; 16                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 16                          ;
-;     plain             ; 48                          ;
-; cycloneiii_lcell_comb ; 667                         ;
+;     SLD               ; 16                          ;
+;     plain             ; 30                          ;
+; cycloneiii_lcell_comb ; 659                         ;
 ;     arith             ; 161                         ;
 ;         2 data inputs ; 83                          ;
 ;         3 data inputs ; 78                          ;
-;     normal            ; 506                         ;
+;     normal            ; 498                         ;
 ;         0 data inputs ; 13                          ;
 ;         1 data inputs ; 10                          ;
-;         2 data inputs ; 104                         ;
-;         3 data inputs ; 61                          ;
-;         4 data inputs ; 318                         ;
+;         2 data inputs ; 93                          ;
+;         3 data inputs ; 74                          ;
+;         4 data inputs ; 308                         ;
 ; cycloneiii_mac_mult   ; 1                           ;
 ; cycloneiii_mac_out    ; 1                           ;
 ; cycloneiii_ram_block  ; 36                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 25.70                       ;
-; Average LUT depth     ; 10.04                       ;
+; Max LUT depth         ; 24.70                       ;
+; Average LUT depth     ; 9.68                        ;
 +-----------------------+-----------------------------+
 
 
@@ -957,7 +958,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:10     ;
 +----------------+--------------+
 
 
@@ -967,7 +968,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Thu Oct 29 23:05:02 2020
+    Info: Processing started: Fri Oct 30 13:26:03 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processor -c Processor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1004,8 +1005,6 @@ Info (12128): Elaborating entity "TopRegisterWrapper" for hierarchy "TopRegister
 Info (12128): Elaborating entity "Module_Reg" for hierarchy "TopRegisterWrapper:TRW1|Module_Reg:PCreg" File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/Code/TopRegisterWrapper.v Line: 26
 Warning (10230): Verilog HDL assignment warning at Module_Reg.v(9): truncated value with size 32 to match size of target (8) File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/Code/Module_Reg.v Line: 9
 Info (12128): Elaborating entity "Module_RP_CP" for hierarchy "TopRegisterWrapper:TRW1|Module_RP_CP:RPreg" File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/Code/TopRegisterWrapper.v Line: 53
-Warning (10230): Verilog HDL assignment warning at Module_RP_CP.v(5): truncated value with size 8 to match size of target (1) File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/Code/Module_RP_CP.v Line: 5
-Warning (10230): Verilog HDL assignment warning at Module_RP_CP.v(10): truncated value with size 8 to match size of target (1) File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/Code/Module_RP_CP.v Line: 10
 Warning (10230): Verilog HDL assignment warning at Module_RP_CP.v(14): truncated value with size 32 to match size of target (8) File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/Code/Module_RP_CP.v Line: 14
 Info (12128): Elaborating entity "Module_RegF" for hierarchy "TopRegisterWrapper:TRW1|Module_RegF:CIDreg" File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/Code/TopRegisterWrapper.v Line: 84
 Warning (10235): Verilog HDL Always Construct warning at Module_RegF.v(8): variable "din" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/Code/Module_RegF.v Line: 8
@@ -1113,7 +1112,7 @@ Info (12133): Instantiated megafunction "DRAM:DRAM1|altsyncram:altsyncram_compon
     Info (12134): Parameter "WIDTH_WORD" = "8"
     Info (12134): Parameter "WIDTHAD" = "8"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2020.10.29.23:05:25 Progress: Loading sld415d47b4/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2020.10.30.13:26:38 Progress: Loading sld415d47b4/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1201,16 +1200,16 @@ Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 925 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 933 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 879 logic cells
+    Info (21061): Implemented 887 logic cells
     Info (21064): Implemented 36 RAM segments
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4852 megabytes
-    Info: Processing ended: Thu Oct 29 23:05:42 2020
-    Info: Elapsed time: 00:00:40
-    Info: Total CPU time (on all processors): 00:01:10
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4853 megabytes
+    Info: Processing ended: Fri Oct 30 13:27:19 2020
+    Info: Elapsed time: 00:01:16
+    Info: Total CPU time (on all processors): 00:01:12
 
 

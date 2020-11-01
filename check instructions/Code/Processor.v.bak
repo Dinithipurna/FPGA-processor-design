@@ -1,0 +1,80 @@
+`include "define.v"
+
+  
+
+  
+
+  module Processor(CLK);
+
+  
+
+  
+
+  wire [1:0] MEMCtrl;
+
+  wire [7:0] DAddress,Ddout,IAddress;
+
+  wire [7:0] Ddin,Idin;
+
+  input CLK;
+
+  
+
+  
+
+  TopRegisterWrapper TRW1(MEMCtrl,DAddress,Ddout,Ddin,IAddress,Idin,CLK);
+
+  
+
+  
+
+  IRAMv2 IRAM1(
+
+	.address(IAddress),
+
+	.clock(CLK),
+
+	.data(),
+
+	.rden(),
+
+	.wren(),
+
+	.q(Idin));
+
+	
+
+	
+
+	
+
+	
+
+	DRAM DRAM1(
+
+	.address(DAddress),
+
+	.clock(CLK),
+
+	.data(Ddout),
+
+	.wren(MEMCtrl[0]),
+
+	.q(Ddin));
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  endmodule
+

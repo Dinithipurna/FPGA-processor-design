@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at Control_Unit.v(19): always construct contains both blocking and non-blocking assignments File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/Pointer mux/Modified/Control_Unit.v Line: 19

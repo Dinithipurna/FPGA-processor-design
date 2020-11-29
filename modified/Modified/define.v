@@ -27,7 +27,8 @@
 `define LDRP_2 	8'b01001001		//73
 `define LDCP_1 	8'b01001100		//76
 `define LDCP_2 	8'b01001101		//77
-`define STSP 		8'b01010000		//80
+`define STSP_1 	8'b01010000		//80
+//`define STSP_2 	8'b01010001		//81
 `define ADD 		8'b01010100		//84
 `define MUL1 		8'b01011000		//88
 `define MUL2 		8'b01011100		//92
@@ -47,15 +48,21 @@
 `define JMPZ1		8'b10010100		//148
 `define JMPZ1Y_1 	8'b10010101		//149
 `define JMPZ1Y_2	8'b10010110		//150
+`define JMPZ1Y_3	8'b10010111		//151
 `define JMPZ1N_1 	8'b10011000		//152
 `define JMPZ1N_2	8'b10011001		//153
 `define JMPZ2    	8'b10011100		//156
 `define JMPZ2Y_1 	8'b10011101		//157
 `define JMPZ2Y_2	8'b10011110		//158
+`define JMPZ2Y_3	8'b10011111		//159
 `define JMPZ2N_1 	8'b10100000		//160
 `define JMPZ2N_2	8'b10100001		//161
 `define JMP_1 		8'b10100100		//164
 `define JMP_2		8'b10100101		//165
+`define JMP_3		8'b10100110		//166
+`define JMP_4		8'b10100111		//167
+`define INCSTP    8'b10101000		//168
+`define MSTPAC    8'b10101100		//172
 
 
 //ALU operations definitions
@@ -109,9 +116,11 @@
 
 
 //MEM Definition
-`define MEM_IDLE		1'b0
-`define MEM_WRITE		1'b1
-`define MEM_READ		1'b0
+`define MEM_IDLE		4'b0000
+`define MEM_WRITE		4'b0010
+`define MEM_READ		4'b0001
+`define MEM_IWRITE	4'b0000
+`define MEM_IREAD		4'b0100
 
 
 

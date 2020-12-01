@@ -1,2 +1,0 @@
-Info (10281): Verilog HDL Declaration information at TopRegisterWrapper.v(14): object "ALU_OP" differs only in case from object "alu_op" in the same scope File: E:/FPGA/Github/FPGA-processor-design/Code/TopRegisterWrapper.v Line: 14
-Info (10281): Verilog HDL Declaration information at TopRegisterWrapper.v(9): object "CLK" differs only in case from object "Clk" in the same scope File: E:/FPGA/Github/FPGA-processor-design/Code/TopRegisterWrapper.v Line: 9

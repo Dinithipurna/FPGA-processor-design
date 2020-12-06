@@ -1,0 +1,45 @@
+module proc(SW,LEDG,CLOCK2_50);
+	input [17:0] SW;
+	input [8:0] LEDG;
+	input CLOCK2_50;
+	
+	wire CLK;
+	wire [7:0] IAddress,Idin,DAddress,Ddin,ADDRo;
+	wire Mem_Ctrl ;
+	
+
+	REG_WRAP RW1(CLK,IAddress,Idin,DAddress,Ddin,ADDRo,Mem_Ctrl)
+
+	clkdiv clkdiv1(
+		.clk(CLOCK2_50),
+		.rst(SW[17]),
+		.en(SW[16]),
+		.clk_div(CLK)
+		);	 
+	 
+	 
+	IRAM IRAM1(
+
+		.address(IAddress),
+
+		.clock(CLK),
+
+		.data(8'd0),
+
+		.wren(1'b0),
+
+		.q(Idin));
+	
+
+	DRAM DRAM1(
+
+		.address(DAddress),
+
+		.clock(CLK),
+
+		.data(ADDRo),
+
+		.wren(Mem_Ctrl),
+
+		.q(Ddin));
+

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Modified
-Mon Nov 09 22:52:09 2020
+Sun Nov 22 17:35:50 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 09 22:52:09 2020       ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 22 17:35:50 2020       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; Modified                                    ;
 ; Top-level Entity Name              ; Modified                                    ;
@@ -208,6 +208,7 @@ https://fpgasoftware.intel.com/eula.
 ; DRAM_Init.mif                                                      ; yes             ; User Memory Initialization File                       ; C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/DRAM_Init.mif                                                      ;             ;
 ; Modified.v                                                         ; yes             ; User Verilog HDL File                                 ; C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/Modified.v                                                         ;             ;
 ; char7.v                                                            ; yes             ; User Verilog HDL File                                 ; C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/char7.v                                                            ;             ;
+; Module_RegCID.v                                                    ; yes             ; User Verilog HDL File                                 ; C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/Module_RegCID.v                                                    ;             ;
 ; altsyncram.tdf                                                     ; yes             ; Megafunction                                          ; d:/quartus/libraries/megafunctions/altsyncram.tdf                                                                                     ;             ;
 ; stratix_ram_block.inc                                              ; yes             ; Megafunction                                          ; d:/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                              ;             ;
 ; lpm_mux.inc                                                        ; yes             ; Megafunction                                          ; d:/quartus/libraries/megafunctions/lpm_mux.inc                                                                                        ;             ;
@@ -254,7 +255,6 @@ https://fpgasoftware.intel.com/eula.
 ; db/add_sub_7pc.tdf                                                 ; yes             ; Auto-Generated Megafunction                           ; C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/db/add_sub_7pc.tdf                                                 ;             ;
 ; db/add_sub_8pc.tdf                                                 ; yes             ; Auto-Generated Megafunction                           ; C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/db/add_sub_8pc.tdf                                                 ;             ;
 ; db/lpm_divide_q9m.tdf                                              ; yes             ; Auto-Generated Megafunction                           ; C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/db/lpm_divide_q9m.tdf                                              ;             ;
-; db/altsyncram_3qv.tdf                                              ; yes             ; Auto-Generated Megafunction                           ; C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/db/altsyncram_3qv.tdf                                              ;             ;
 +--------------------------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
@@ -267,9 +267,9 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Total combinational functions               ; 960                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 495                      ;
+;     -- 4 input functions                    ; 496                      ;
 ;     -- 3 input functions                    ; 224                      ;
-;     -- <=2 input functions                  ; 241                      ;
+;     -- <=2 input functions                  ; 240                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
 ;     -- normal mode                          ; 770                      ;
@@ -286,7 +286,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 230                      ;
-; Total fan-out                               ; 5034                     ;
+; Total fan-out                               ; 5035                     ;
 ; Average fan-out                             ; 3.18                     ;
 +---------------------------------------------+--------------------------+
 
@@ -338,7 +338,7 @@ https://fpgasoftware.intel.com/eula.
 ;    |Module_Reg:PCreg|                                                                                                                   ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Modified|Module_Reg:PCreg                                                                                                                                                                                                                                                                                                                           ; Module_Reg                        ; work         ;
 ;    |Module_Reg:STPreg|                                                                                                                  ; 16 (16)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Modified|Module_Reg:STPreg                                                                                                                                                                                                                                                                                                                          ; Module_Reg                        ; work         ;
 ;    |Module_Reg:WVreg|                                                                                                                   ; 9 (9)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Modified|Module_Reg:WVreg                                                                                                                                                                                                                                                                                                                           ; Module_Reg                        ; work         ;
-;    |Module_RegF:CIDreg|                                                                                                                 ; 17 (17)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Modified|Module_RegF:CIDreg                                                                                                                                                                                                                                                                                                                         ; Module_RegF                       ; work         ;
+;    |Module_RegCID:CIDreg|                                                                                                               ; 17 (17)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Modified|Module_RegCID:CIDreg                                                                                                                                                                                                                                                                                                                       ; Module_RegCID                     ; work         ;
 ;    |Module_RegF:MCreg|                                                                                                                  ; 16 (16)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Modified|Module_RegF:MCreg                                                                                                                                                                                                                                                                                                                          ; Module_RegF                       ; work         ;
 ;    |Pointer_MUX:Pointer_MSelect|                                                                                                        ; 16 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Modified|Pointer_MUX:Pointer_MSelect                                                                                                                                                                                                                                                                                                                ; Pointer_MUX                       ; work         ;
 ;       |lpm_mux:LPM_MUX_component|                                                                                                       ; 16 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Modified|Pointer_MUX:Pointer_MSelect|lpm_mux:LPM_MUX_component                                                                                                                                                                                                                                                                                      ; lpm_mux                           ; work         ;
@@ -435,7 +435,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Number of registers using Synchronous Load   ; 56    ;
 ; Number of registers using Asynchronous Clear ; 132   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 219   ;
+; Number of registers using Clock Enable       ; 218   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -446,9 +446,10 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Control_Unit:CU1|NXTSTATE[2]                                                                                                                                                                                                                                                                                                    ; 35      ;
+; Module_RegCID:CIDreg|dout[1]                                                                                                                                                                                                                                                                                                    ; 3       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 2       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
-; Total number of inverted registers = 3                                                                                                                                                                                                                                                                                          ;         ;
+; Total number of inverted registers = 4                                                                                                                                                                                                                                                                                          ;         ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -471,28 +472,28 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Modified|clkdiv:clkdiv1|count[31]                                                                                                                                               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Modified|Module_Reg:EOPCreg|dout[3]                                                                                                                                             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Modified|Module_Reg:MVreg|dout[7]                                                                                                                                               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Modified|Module_Reg:WVreg|dout[1]                                                                                                                                               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Modified|Module_Reg:STPreg|dout[3]                                                                                                                                              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Modified|Module_RegF:CIDreg|dout[4]                                                                                                                                             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Modified|clkdiv:clkdiv1|count[4]                                                                                                                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Modified|Module_Reg:EOPCreg|dout[0]                                                                                                                                             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Modified|Module_Reg:MVreg|dout[1]                                                                                                                                               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Modified|Module_Reg:WVreg|dout[0]                                                                                                                                               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Modified|Module_Reg:STPreg|dout[2]                                                                                                                                              ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |Modified|Module_RegCID:CIDreg|dout[6]                                                                                                                                           ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Modified|Module_Reg:MULRreg|dout[0]                                                                                                                                             ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Modified|IRAM:IRAM1|altsyncram:altsyncram_component|altsyncram_hdm1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3]                                     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Modified|IRAM:IRAM1|altsyncram:altsyncram_component|altsyncram_hdm1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[5]                                                ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Modified|IRAM:IRAM1|altsyncram:altsyncram_component|altsyncram_hdm1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[1]                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Modified|IRAM:IRAM1|altsyncram:altsyncram_component|altsyncram_hdm1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]                                                ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Modified|DRAM:DRAM1|altsyncram:altsyncram_component|altsyncram_7dm1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3]                                     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Modified|DRAM:DRAM1|altsyncram:altsyncram_component|altsyncram_7dm1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[7]                                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Modified|IRAM:IRAM1|altsyncram:altsyncram_component|altsyncram_hdm1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[2]                                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Modified|DRAM:DRAM1|altsyncram:altsyncram_component|altsyncram_7dm1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[0]                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Modified|DRAM:DRAM1|altsyncram:altsyncram_component|altsyncram_7dm1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Modified|IRAM:IRAM1|altsyncram:altsyncram_component|altsyncram_hdm1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[1]                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Modified|DRAM:DRAM1|altsyncram:altsyncram_component|altsyncram_7dm1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[4]                                                ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Modified|Module_RP_CP:RPreg|dout[5]                                                                                                                                             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Modified|Module_RP_CP:CPreg|dout[6]                                                                                                                                             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Modified|Module_Reg:ADDRreg|dout[6]                                                                                                                                             ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Modified|IRAM:IRAM1|altsyncram:altsyncram_component|altsyncram_hdm1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Modified|Module_RP_CP:CPreg|dout[5]                                                                                                                                             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Modified|Module_Reg:ADDRreg|dout[0]                                                                                                                                             ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Modified|IRAM:IRAM1|altsyncram:altsyncram_component|altsyncram_hdm1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[2] ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Modified|DRAM:DRAM1|altsyncram:altsyncram_component|altsyncram_7dm1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[3] ;
 ; 256:1              ; 3 bits    ; 510 LEs       ; 75 LEs               ; 435 LEs                ; Yes        ; |Modified|Control_Unit:CU1|NXTSTATE[6]                                                                                                                                           ;
 ; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |Modified|IRAM:IRAM1|altsyncram:altsyncram_component|altsyncram_hdm1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]      ;
 ; 26:1               ; 4 bits    ; 68 LEs        ; 44 LEs               ; 24 LEs                 ; Yes        ; |Modified|DRAM:DRAM1|altsyncram:altsyncram_component|altsyncram_7dm1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]      ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |Modified|ALU:ALUAC|dout[7]                                                                                                                                                      ;
+; 10:1               ; 8 bits    ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |Modified|ALU:ALUAC|dout[0]                                                                                                                                                      ;
 ; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |Modified|ALU:ALUAC|Add0                                                                                                                                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -937,13 +938,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 156                         ;
 ; cycloneiii_ff         ; 259                         ;
 ;     CLR               ; 43                          ;
-;     ENA               ; 96                          ;
+;     ENA               ; 95                          ;
 ;     ENA CLR           ; 14                          ;
 ;     ENA CLR SLD       ; 16                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 16                          ;
 ;     SLD               ; 24                          ;
-;     plain             ; 40                          ;
+;     plain             ; 41                          ;
 ; cycloneiii_lcell_comb ; 786                         ;
 ;     arith             ; 182                         ;
 ;         2 data inputs ; 89                          ;
@@ -951,9 +952,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     normal            ; 604                         ;
 ;         0 data inputs ; 13                          ;
 ;         1 data inputs ; 12                          ;
-;         2 data inputs ; 86                          ;
+;         2 data inputs ; 85                          ;
 ;         3 data inputs ; 61                          ;
-;         4 data inputs ; 432                         ;
+;         4 data inputs ; 433                         ;
 ; cycloneiii_mac_mult   ; 1                           ;
 ; cycloneiii_mac_out    ; 1                           ;
 ; cycloneiii_ram_block  ; 35                          ;
@@ -968,7 +969,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:17     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -978,7 +979,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Mon Nov 09 22:50:44 2020
+    Info: Processing started: Sun Nov 22 17:35:13 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Modified -c Modified
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1015,6 +1016,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file wrap_p_
     Info (12023): Found entity 1: wrap_P_mux File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/wrap_P_mux.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file check_ram.v
     Info (12023): Found entity 1: check_ram File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/check_ram.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file module_regcid.v
+    Info (12023): Found entity 1: Module_RegCID File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/Module_RegCID.v Line: 1
 Info (12127): Elaborating entity "Modified" for the top level hierarchy
 Warning (10034): Output port "LEDG[7..6]" at Modified.v(8) has no driver File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/Modified.v Line: 8
 Info (12128): Elaborating entity "clkdiv" for hierarchy "clkdiv:clkdiv1" File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/Modified.v Line: 39
@@ -1120,12 +1123,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mux_
 Info (12128): Elaborating entity "mux_hrc" for hierarchy "Pointer_MUX:Pointer_MSelect|lpm_mux:LPM_MUX_component|mux_hrc:auto_generated" File: d:/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
 Info (12128): Elaborating entity "Module_Reg" for hierarchy "Module_Reg:PCreg" File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/Modified.v Line: 119
 Info (12128): Elaborating entity "Module_RP_CP" for hierarchy "Module_RP_CP:RPreg" File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/Modified.v Line: 146
-Info (12128): Elaborating entity "Module_RegF" for hierarchy "Module_RegF:CIDreg" File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/Modified.v Line: 177
+Info (12128): Elaborating entity "Module_RegCID" for hierarchy "Module_RegCID:CIDreg" File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/Modified.v Line: 177
+Warning (10235): Verilog HDL Always Construct warning at Module_RegCID.v(10): variable "din" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/Module_RegCID.v Line: 10
+Info (12128): Elaborating entity "Module_RegF" for hierarchy "Module_RegF:MCreg" File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/Modified.v Line: 198
 Warning (10235): Verilog HDL Always Construct warning at Module_RegF.v(8): variable "din" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/Module_RegF.v Line: 8
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALUAC" File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/Modified.v Line: 245
 Info (12128): Elaborating entity "char7" for hierarchy "char7:char71" File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/new/Modified/Modified.v Line: 250
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2020.11.09.22:51:24 Progress: Loading sld30ce387f/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2020.11.22.17:35:33 Progress: Loading sld30ce387f/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1242,11 +1247,11 @@ Info (21057): Implemented 1161 device resources after synthesis - the final reso
     Info (21061): Implemented 1018 logic cells
     Info (21064): Implemented 35 RAM segments
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4856 megabytes
-    Info: Processing ended: Mon Nov 09 22:52:09 2020
-    Info: Elapsed time: 00:01:25
-    Info: Total CPU time (on all processors): 00:01:11
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Sun Nov 22 17:35:50 2020
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:01:01
 
 
 +------------------------------------------+

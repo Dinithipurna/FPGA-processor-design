@@ -594,6 +594,7 @@ set_location_assignment PIN_AC27 -to SW[2]
 set_location_assignment PIN_AB23 -to SW[12]
 set_global_assignment -name VERILOG_FILE wrap_P_mux.v
 set_global_assignment -name VERILOG_FILE check_ram.v
+set_global_assignment -name VERILOG_FILE Module_RegCID.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

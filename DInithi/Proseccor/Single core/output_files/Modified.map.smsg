@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at Control_Unit.v(20): always construct contains both blocking and non-blocking assignments File: C:/Users/dinid/Desktop/fp/Modified/Control_Unit.v Line: 20

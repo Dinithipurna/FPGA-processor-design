@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ram
-Fri Oct 30 23:17:57 2020
+Sun Nov 22 17:41:46 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -22,8 +22,8 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
  14. Source assignments for ram2:ram|altsyncram:altsyncram_component|altsyncram_tvl1:auto_generated|altsyncram_b5c2:altsyncram1
  15. Parameter Settings for User Entity Instance: ram2:ram|altsyncram:altsyncram_component
  16. altsyncram Parameter Settings by Entity Instance
- 17. Port Connectivity Checks: "regis:reg1"
- 18. Port Connectivity Checks: "ram2:ram"
+ 17. Port Connectivity Checks: "ram2:ram"
+ 18. Port Connectivity Checks: "regis:reg1"
  19. In-System Memory Content Editor Settings
  20. Post-Synthesis Netlist Statistics for Top Partition
  21. Elapsed Time Per Partition
@@ -54,7 +54,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 30 23:17:57 2020       ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 22 17:41:46 2020       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; ram                                         ;
 ; Top-level Entity Name              ; wrapper                                     ;
@@ -428,24 +428,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+------------------------------------------+
 
 
-+----------------------------------------+
-; Port Connectivity Checks: "regis:reg1" ;
-+------+-------+----------+--------------+
-; Port ; Type  ; Severity ; Details      ;
-+------+-------+----------+--------------+
-; Wen  ; Input ; Info     ; Stuck at VCC ;
-; RST  ; Input ; Info     ; Stuck at GND ;
-; INC  ; Input ; Info     ; Stuck at GND ;
-+------+-------+----------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ram2:ram"                                                                                                                                         ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                         ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; address ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (5 bits) it drives.  Extra input bit(s) "address[4..4]" will be connected to GND. ;
+; wren    ; Input ; Info     ; Stuck at GND                                                                                                                                    ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------+
-; Port Connectivity Checks: "ram2:ram"   ;
-+------+-------+----------+--------------+
-; Port ; Type  ; Severity ; Details      ;
-+------+-------+----------+--------------+
-; wren ; Input ; Info     ; Stuck at GND ;
-+------+-------+----------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regis:reg1"                                                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Wen  ; Input  ; Info     ; Stuck at VCC                                                                                                            ;
+; RST  ; Input  ; Info     ; Stuck at GND                                                                                                            ;
+; INC  ; Input  ; Info     ; Stuck at GND                                                                                                            ;
+; dout ; Output ; Warning  ; Output or bidir port (5 bits) is wider than the port expression (4 bits) it drives; bit(s) "dout[4..4]" have no fanouts ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------+
@@ -481,7 +483,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycloneiii_ram_block  ; 4                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.63                        ;
+; Average LUT depth     ; 1.64                        ;
 +-----------------------+-----------------------------+
 
 
@@ -490,7 +492,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -500,7 +502,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Fri Oct 30 23:17:15 2020
+    Info: Processing started: Sun Nov 22 17:41:18 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ram -c ram
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -510,7 +512,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file regis.v
     Info (12023): Found entity 1: regis File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file wrapper.v
     Info (12023): Found entity 1: wrapper File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/wrapper.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file clkdiv.v
+    Info (12023): Found entity 1: clkdiv File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/clkdiv.v Line: 1
 Info (12127): Elaborating entity "wrapper" for the top level hierarchy
+Info (12128): Elaborating entity "regis" for hierarchy "regis:reg1" File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/wrapper.v Line: 15
+Warning (10235): Verilog HDL Always Construct warning at regis.v(7): variable "Wen" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 7
+Warning (10235): Verilog HDL Always Construct warning at regis.v(8): variable "RST" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 8
+Warning (10235): Verilog HDL Always Construct warning at regis.v(9): variable "INC" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 9
+Warning (10235): Verilog HDL Always Construct warning at regis.v(9): variable "dout" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 9
+Warning (10230): Verilog HDL assignment warning at regis.v(9): truncated value with size 32 to match size of target (5) File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 9
+Warning (10235): Verilog HDL Always Construct warning at regis.v(10): variable "dout" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 10
+Warning (10240): Verilog HDL Always Construct warning at regis.v(5): inferring latch(es) for variable "dout", which holds its previous value in one or more paths through the always construct File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 5
+Info (10041): Inferred latch for "dout[0]" at regis.v(5) File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 5
+Info (10041): Inferred latch for "dout[1]" at regis.v(5) File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 5
+Info (10041): Inferred latch for "dout[2]" at regis.v(5) File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 5
+Info (10041): Inferred latch for "dout[3]" at regis.v(5) File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 5
+Info (10041): Inferred latch for "dout[4]" at regis.v(5) File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 5
 Info (12128): Elaborating entity "ram2" for hierarchy "ram2:ram" File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/wrapper.v Line: 16
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ram2:ram|altsyncram:altsyncram_component" File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/ram2.v Line: 86
 Info (12130): Elaborated megafunction instantiation "ram2:ram|altsyncram:altsyncram_component" File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/ram2.v Line: 86
@@ -551,20 +568,8 @@ Info (12133): Instantiated megafunction "ram2:ram|altsyncram:altsyncram_componen
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "ram2:ram|altsyncram:altsyncram_component|altsyncram_tvl1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: d:/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "ram2:ram|altsyncram:altsyncram_component|altsyncram_tvl1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: d:/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "ram2:ram|altsyncram:altsyncram_component|altsyncram_tvl1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: d:/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
-Info (12128): Elaborating entity "regis" for hierarchy "regis:reg1" File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/wrapper.v Line: 17
-Warning (10235): Verilog HDL Always Construct warning at regis.v(7): variable "Wen" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 7
-Warning (10235): Verilog HDL Always Construct warning at regis.v(8): variable "RST" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 8
-Warning (10235): Verilog HDL Always Construct warning at regis.v(9): variable "INC" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 9
-Warning (10235): Verilog HDL Always Construct warning at regis.v(9): variable "dout" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 9
-Warning (10230): Verilog HDL assignment warning at regis.v(9): truncated value with size 32 to match size of target (4) File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 9
-Warning (10235): Verilog HDL Always Construct warning at regis.v(10): variable "dout" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 10
-Warning (10240): Verilog HDL Always Construct warning at regis.v(5): inferring latch(es) for variable "dout", which holds its previous value in one or more paths through the always construct File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 5
-Info (10041): Inferred latch for "dout[0]" at regis.v(5) File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 5
-Info (10041): Inferred latch for "dout[1]" at regis.v(5) File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 5
-Info (10041): Inferred latch for "dout[2]" at regis.v(5) File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 5
-Info (10041): Inferred latch for "dout[3]" at regis.v(5) File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 5
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2020.10.30.23:17:42 Progress: Loading sld73f98f60/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2020.11.22.17:41:36 Progress: Loading sld73f98f60/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -591,18 +596,21 @@ Warning (14026): LATCH primitive "regis:reg1|dout[1]" is permanently enabled Fil
 Warning (14026): LATCH primitive "regis:reg1|dout[2]" is permanently enabled File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 5
 Warning (14026): LATCH primitive "regis:reg1|dout[3]" is permanently enabled File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 5
 Warning (14026): LATCH primitive "regis:reg1|dout[0]" is permanently enabled File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/regis.v Line: 5
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "address[4]" File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/checkmodules/RAM modified/wrapper.v Line: 7
 Info (21057): Implemented 231 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 5 output pins
     Info (21061): Implemented 208 logic cells
     Info (21064): Implemented 4 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4838 megabytes
-    Info: Processing ended: Fri Oct 30 23:17:57 2020
-    Info: Elapsed time: 00:00:42
-    Info: Total CPU time (on all processors): 00:01:17
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 4814 megabytes
+    Info: Processing ended: Sun Nov 22 17:41:46 2020
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:58
 
 

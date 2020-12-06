@@ -9,10 +9,37 @@ data[0] => data[0].IN1
 data[1] => data[1].IN1
 data[2] => data[2].IN1
 data[3] => data[3].IN1
-q[0] <= regis:reg1.port5
-q[1] <= regis:reg1.port5
-q[2] <= regis:reg1.port5
-q[3] <= regis:reg1.port5
+q[0] <= ram2:ram.port4
+q[1] <= ram2:ram.port4
+q[2] <= ram2:ram.port4
+q[3] <= ram2:ram.port4
+
+
+|wrapper|regis:reg1
+Wen => dout[0].OUTPUTSELECT
+Wen => dout[1].OUTPUTSELECT
+Wen => dout[2].OUTPUTSELECT
+Wen => dout[3].OUTPUTSELECT
+Wen => dout[4].OUTPUTSELECT
+Wen => dout[4].IN1
+BusOut[0] => dout[0].DATAB
+BusOut[1] => dout[1].DATAB
+BusOut[2] => dout[2].DATAB
+BusOut[3] => dout[3].DATAB
+BusOut[4] => dout[4].DATAB
+Clk => ~NO_FANOUT~
+RST => dout[0].OUTPUTSELECT
+RST => dout[1].OUTPUTSELECT
+RST => dout[2].OUTPUTSELECT
+RST => dout[3].OUTPUTSELECT
+RST => dout[4].OUTPUTSELECT
+RST => dout[4].IN0
+INC => dout[4].IN1
+dout[0] <= dout[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |wrapper|ram2:ram
@@ -507,28 +534,5 @@ ENA => WORD_SR.OUTPUTSELECT
 ENA => WORD_SR.OUTPUTSELECT
 TDI => WORD_SR.DATAA
 TDO <= WORD_SR[0].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|wrapper|regis:reg1
-Wen => dout[0].OUTPUTSELECT
-Wen => dout[1].OUTPUTSELECT
-Wen => dout[2].OUTPUTSELECT
-Wen => dout[3].OUTPUTSELECT
-Wen => dout[3].IN1
-BusOut[0] => dout[0].DATAB
-BusOut[1] => dout[1].DATAB
-BusOut[2] => dout[2].DATAB
-BusOut[3] => dout[3].DATAB
-Clk => ~NO_FANOUT~
-RST => dout[0].OUTPUTSELECT
-RST => dout[1].OUTPUTSELECT
-RST => dout[2].OUTPUTSELECT
-RST => dout[3].OUTPUTSELECT
-RST => dout[3].IN0
-INC => dout[3].IN1
-dout[0] <= dout[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-dout[1] <= dout[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-dout[2] <= dout[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
-dout[3] <= dout[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at Control_Unit.v(25): always construct contains both blocking and non-blocking assignments File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/multicore/Control_Unit.v Line: 25
+Info (10281): Verilog HDL Declaration information at proc.v(44): object "DRAM_IN" differs only in case from object "DRAM_in" in the same scope File: C:/Users/dinid/Documents/GitHub/FPGA-processor-design/multicore/proc.v Line: 44

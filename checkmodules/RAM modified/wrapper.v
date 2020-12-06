@@ -12,9 +12,9 @@ module wrapper(
 	
 	wire [3:0] out;
 	
+	regis reg1(1'b1, address, clock, 1'b0, 1'b0, out);
+	ram2 ram(out,clock,data,1'b0,q);
 	
-	ram2 ram(address,clock,data,1'b0,out);
-	regis reg1(1'b1, out, clock, 1'b0, 1'b0, q);
 	
 	endmodule
 	

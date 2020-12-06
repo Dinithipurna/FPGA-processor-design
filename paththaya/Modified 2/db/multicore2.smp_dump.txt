@@ -1,0 +1,12 @@
+
+State Machine - |Modified|MemController:irammemc|state
+Name state.free state.ac1 state.ac0 
+state.free 0 0 0 
+state.ac0 1 0 1 
+state.ac1 1 1 0 
+
+State Machine - |Modified|MemController:drammemc|state
+Name state.free state.ac1 state.ac0 
+state.free 0 0 0 
+state.ac0 1 0 1 
+state.ac1 1 1 0 

@@ -80,7 +80,7 @@ DRAM DRAM1(
 
 
 
-core #(8'd3) core0
+core #(8'd0) core0
 (
 	.CLK(CLK),
 	.Idin(Idin),

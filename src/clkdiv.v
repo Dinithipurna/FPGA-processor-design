@@ -5,7 +5,7 @@ module clkdiv(
     output reg clk_div
     ); 
 	 
-	 localparam constantNumber = 312500;
+	 localparam constantNumber = 3125000;
 	 reg [31:0] count;
  
 always @ (posedge(clk), posedge(rst))

@@ -3,7 +3,7 @@ module clkdiv(
     input rst,
 	 input en,
     output reg clk_div
-    );
+    ); 
 	 
 	 localparam constantNumber = 31250;
 	 reg [31:0] count;

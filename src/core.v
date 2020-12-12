@@ -12,46 +12,39 @@ module core
 	output [3:0] Mem_Ctrl,
 	output [7:0] IAddress,DAddress, Ddout
 	
-	
 
 );
 
 
-wire [7:0] INS,RPo,GSPo,STPo,ADDRo,MULRo,WVo,MVo,CIDo,EOPCo,ACo,CPo,BUSo,MCo;
-wire Z1,Z2;
-wire [2:0] ALU_OP;
-wire [1:0] PCtrl;
-wire [3:0] Bus_Select;
-wire [13:0] Wen,INC,RST;
+	wire [7:0] INS,RPo,GSPo,STPo,ADDRo,MULRo,WVo,MVo,CIDo,EOPCo,ACo,CPo,BUSo,MCo;
+	wire Z1,Z2;
+	wire [2:0] ALU_OP;
+	wire [1:0] PCtrl;
+	wire [3:0] Bus_Select;
+	wire [13:0] Wen,INC,RST;
 
 
 
 
 
-assign Ddout = ADDRo;
+	assign Ddout = ADDRo;
 
- Control_Unit  		CU1(
-	.INS(INS),
-	.Z1(Z1), 
-	.Z2(Z2),
-	.clk(CLK),
-	.ALU_OP(ALU_OP),
-	.Bus_Select(Bus_Select),
-	.PCtrl(PCtrl),
-	.WRT_en(Wen), 
-	.INC_en(INC),
-	.RST_en(RST),
-	.MEMCtrl(Mem_Ctrl),
-	.acq(acq)
-);
-
-
-
- BUS_MUX 				BUS_MSelect(
+ 	Control_Unit  		CU1(
+		.INS(INS),
+		.Z1(Z1), 
+		.Z2(Z2),
+		.clk(CLK),
+		.ALU_OP(ALU_OP),
+		.Bus_Select(Bus_Select),
+		.PCtrl(PCtrl),
+		.WRT_en(Wen), 
+		.INC_en(INC),
+		.RST_en(RST),
+		.MEMCtrl(Mem_Ctrl),
+		.acq(acq)
+		);
+ 	BUS_MUX 			BUS_MSelect(
 						.data0x(Ddin),
-						.data10x(RPo),
-						.data11x(GSPo),
-						.data12x(STPo),
 						.data1x(ADDRo),
 						.data2x(MULRo),
 						.data3x(WVo),
@@ -61,12 +54,18 @@ assign Ddout = ADDRo;
 						.data7x(EOPCo),
 						.data8x(ACo),
 						.data9x(CPo),
+						.data10x(RPo),
+						.data11x(GSPo),
+						.data12x(STPo),
+						
 						.sel(Bus_Select),
 						.result(BUSo)
 						);
+
+
 						
 	
- Pointer_MUX 			Pointer_MSelect(
+ 	Pointer_MUX 		Pointer_MSelect(
 						.data0x(GSPo),
 						.data1x(RPo),
 						.data2x(CPo),
@@ -75,7 +74,7 @@ assign Ddout = ADDRo;
 						.result(DAddress)
 						);	
 
- Module_Reg				PCreg(
+ 	Module_Reg			PCreg(
 					.Wen(Wen[`RO_PC]),
 					.BusOut(INS),
 					.Clk(CLK),
@@ -84,7 +83,7 @@ assign Ddout = ADDRo;
 					.dout(IAddress)
 					);
 		
- Module_Reg 			IRreg(
+ 	Module_Reg 		IRreg(
 					.Wen(1'b1),
 					.BusOut(Idin),
 					.Clk(CLK),
@@ -93,7 +92,7 @@ assign Ddout = ADDRo;
 					.dout(INS)
 					);
 					
- Module_Reg 			GSPreg(
+ 	Module_Reg 		GSPreg(
 					.Wen(Wen[`RO_GSP]),
 					.BusOut(BUSo),
 					.Clk(CLK),
@@ -102,7 +101,7 @@ assign Ddout = ADDRo;
 					.dout(GSPo)
 					);
 					
- Module_RP_CP 			RPreg(
+ 	Module_RP_CP 		RPreg(
 					.Wen(Wen[`RO_RP]),
 					.BusOut(BUSo),
 					.Clk(CLK),
@@ -111,7 +110,7 @@ assign Ddout = ADDRo;
 					.dout(RPo)
 					);
 			
- Module_RP_CP 			CPreg(
+ 	Module_RP_CP 		CPreg(
 					.Wen(Wen[`RO_CP]),
 					.BusOut(BUSo),
 					.Clk(CLK),
@@ -121,7 +120,7 @@ assign Ddout = ADDRo;
 					);
 					
 					
- Module_Reg 			STPreg(
+ 	Module_Reg 		STPreg(
 					.Wen(Wen[`RO_STP]),
 					.BusOut(BUSo),
 					.Clk(CLK),
@@ -131,7 +130,7 @@ assign Ddout = ADDRo;
 					);
 					
 					
- Module_RegF #(CIDval) CIDreg(
+ 	Module_RegF #(CIDval) CIDreg(
 					.Wen(Wen[`RO_CID]),
 					.BusOut(BUSo),
 					.Clk(CLK),
@@ -142,7 +141,7 @@ assign Ddout = ADDRo;
 					.z(Z1)
 					);
 					
- Module_Reg 			EOPCreg(
+ 	Module_Reg 		EOPCreg(
 					.Wen(Wen[`RO_EOPC]),
 					.BusOut(BUSo),
 					.Clk(CLK),
@@ -152,7 +151,7 @@ assign Ddout = ADDRo;
 					);
 					
 					
- Module_RegF 			MCreg(
+ 	Module_RegF 		MCreg(
 					.Wen(Wen[`RO_MC]),
 					.BusOut(BUSo),
 					.Clk(CLK),
@@ -163,7 +162,7 @@ assign Ddout = ADDRo;
 					.z(Z2)
 					);
 					
- Module_Reg 			MVreg(
+ 	Module_Reg 		MVreg(
 					.Wen(Wen[`RO_MV]),
 					.BusOut(BUSo),
 					.Clk(CLK),
@@ -172,7 +171,7 @@ assign Ddout = ADDRo;
 					.dout(MVo)
 					);
 					
- Module_Reg 			WVreg(
+ 	Module_Reg 		WVreg(
 					.Wen(Wen[`RO_WV]),
 					.BusOut(BUSo),
 					.Clk(CLK),
@@ -181,7 +180,7 @@ assign Ddout = ADDRo;
 					.dout(WVo)
 					);
 					
- Module_Reg 			MULRreg(
+ 	Module_Reg 		MULRreg(
 					.Wen(Wen[`RO_MULR]),
 					.BusOut(BUSo),
 					.Clk(CLK),
@@ -191,7 +190,7 @@ assign Ddout = ADDRo;
 					);
 					
 					
- Module_Reg 			ADDRreg(
+ 	Module_Reg 		ADDRreg(
 					.Wen(Wen[`RO_ADDR]),
 					.BusOut(BUSo),
 					.Clk(CLK),
@@ -200,7 +199,7 @@ assign Ddout = ADDRo;
 					.dout(ADDRo)
 					);
 					
- ALU 						ALUAC(
+ 	ALU 				ALUAC(
 					.Wen(Wen[`RO_AC]),
 					.BusOut(BUSo),
 					.Clk(CLK),

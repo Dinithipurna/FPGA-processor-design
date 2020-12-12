@@ -6,7 +6,7 @@ module Control_Unit
 	input Z1, Z2, clk,
 	input acq,
 	output reg [2:0] ALU_OP = `ALU_NONE,
-	output reg [3:0] Bus_Select = `BS_MEMOUT,
+	output reg [3:0] Bus_Select = `BS_AC,
 	output reg [1:0] PCtrl = `P_GSP,
 	output reg [13:0] WRT_en = 14'd0, INC_en=14'd0,RST_en=14'd0,
 	output reg [3:0] MEMCtrl = `MEM_IDLE
@@ -36,28 +36,25 @@ module Control_Unit
 				
 			
 		`FETCH_1:begin
-				ALU_OP 		<= 	`ALU_NONE;
-				Bus_Select 	<= 	`BS_AC;
-				PCtrl  		<= 	`P_GSP;
+				ALU_OP 			<= 	`ALU_NONE;
+				Bus_Select 		<= 	`BS_AC;
+				PCtrl  			<= 	`P_GSP;
 				MEMCtrl 		<= 	`MEM_IREAD;
 				INC_en  		<= 	14'd0 ;
 				RST_en  		<= 	14'd0 ;
 				WRT_en  		<= 	14'd0 ;
-				if(acq)
-					NXTSTATE		<=		`FETCH_2;
-				else
-					NXTSTATE		<=		`FETCH_1;
+				NXTSTATE		<=	`FETCH_2;
 			end
 			
 		`FETCH_2:begin
-				ALU_OP 		<= 	`ALU_NONE;
-				Bus_Select 	<= 	`BS_AC;
-				PCtrl  		<= 	`P_GSP;
+				ALU_OP 			<= 	`ALU_NONE;
+				Bus_Select 		<= 	`BS_AC;
+				PCtrl  			<= 	`P_GSP;
 				MEMCtrl 		<= 	`MEM_IREAD;
 				INC_en  		<= 	14'b00000000000001 ;
 				RST_en  		<= 	14'd0 ;
 				WRT_en  		<= 	14'b00000000000010 ;
-				NXTSTATE		<=		INS;
+				NXTSTATE		<=	INS;
 			end			
 		
 		`RSTALL:begin
@@ -210,10 +207,8 @@ module Control_Unit
 				INC_en  		<= 	14'd0 ;
 				RST_en  		<= 	14'd0 ;
 				WRT_en  		<= 	14'd0 ;
-				if(acq)
-					NXTSTATE		<=		`LDADDR_2;
-				else
-					NXTSTATE		<=		`LDADDR_1;
+				NXTSTATE		<=		`LDADDR_2;
+
 			end
 			
 		`LDADDR_2:begin
@@ -235,10 +230,8 @@ module Control_Unit
 				INC_en  		<= 	14'd0 ;
 				RST_en  		<= 	14'd0 ;
 				WRT_en  		<= 	14'd0 ;
-				if(acq)
-					NXTSTATE		<=		`LDAC_2;
-				else
-					NXTSTATE		<=		`LDAC_1;
+				NXTSTATE		<=		`LDAC_2;
+
 			end 
 			
 		`LDAC_2:begin
@@ -260,10 +253,8 @@ module Control_Unit
 				INC_en  		<= 	14'd0 ;
 				RST_en  		<= 	14'd0 ;
 				WRT_en  		<= 	14'd0 ;
-				if(acq)
-					NXTSTATE		<=		`LDMULR_2;
-				else
-					NXTSTATE		<=		`LDMULR_1;
+				NXTSTATE		<=		`LDMULR_2;
+
 				end
 				
 		`LDMULR_2:begin
@@ -285,10 +276,7 @@ module Control_Unit
 				INC_en  		<= 	14'd0 ;
 				RST_en  		<= 	14'd0 ;
 				WRT_en  		<= 	14'd0 ;
-				if(acq)
-					NXTSTATE		<=		`LDRP_2;
-				else
-					NXTSTATE		<=		`LDRP_1;
+				NXTSTATE		<=		`LDRP_2;
 			end
 			
 		`LDRP_2:begin
@@ -310,10 +298,7 @@ module Control_Unit
 				INC_en  		<= 	14'd0 ;
 				RST_en  		<= 	14'd0 ;
 				WRT_en  		<= 	14'd0 ;
-				if(acq)
-					NXTSTATE		<=		`LDCP_2;
-				else
-					NXTSTATE		<=		`LDCP_1;
+				NXTSTATE		<=		`LDCP_2;
 			end
 			
 		`LDCP_2:begin
@@ -335,25 +320,10 @@ module Control_Unit
 				INC_en  		<= 	14'd0 ;
 				RST_en  		<= 	14'd0 ;
 				WRT_en  		<= 	14'd0 ;
-				if(acq)
-					NXTSTATE		<=		`FETCH_1;
-				else
-					NXTSTATE		<=		`STSP_1;
+				NXTSTATE		<=		`FETCH_1;
 			end
-//			
-//		`STSP_2:begin
-//				ALU_OP 		<= 	`ALU_NONE;
-//				Bus_Select 	<= 	`BS_AC;
-//				PCtrl  		<= 	`P_STP;
-//				MEMCtrl 		<= 	`MEM_WRITE;
-//				INC_en  		<= 	14'd0 ;
-//				RST_en  		<= 	14'd0 ;
-//				WRT_en  		<= 	14'd0 ;
-//				NXTSTATE		<=		`FETCH_1;
-//				
-//			end
 			
-	   `ADD:begin
+	   	`ADD:begin
 				ALU_OP 		<= 	`ALU_ADD;
 				Bus_Select 	<= 	`BS_ADDR;
 				PCtrl  		<= 	`P_GSP;
@@ -364,7 +334,7 @@ module Control_Unit
 				NXTSTATE		<=		`FETCH_1;
 			end
 			
-	   `MUL1:begin
+	   	`MUL1:begin
 				ALU_OP 		<= 	`ALU_MUL;
 				Bus_Select 	<= 	`BS_MULR;
 				PCtrl  		<= 	`P_GSP;
@@ -375,7 +345,7 @@ module Control_Unit
 				NXTSTATE		<=		`FETCH_1;
 			end
 			
-	   `MUL2:begin
+	   	`MUL2:begin
 				ALU_OP 		<= 	`ALU_MUL;
 				Bus_Select 	<= 	`BS_MV;
 				PCtrl  		<= 	`P_GSP;
@@ -386,7 +356,7 @@ module Control_Unit
 				NXTSTATE		<=		`FETCH_1;
 			end
 			
-	   `DIV:begin
+	   	`DIV:begin
 				ALU_OP 		<= 	`ALU_DIV;
 				Bus_Select 	<= 	`BS_WV;
 				PCtrl  		<= 	`P_GSP;
@@ -397,7 +367,7 @@ module Control_Unit
 				NXTSTATE		<=		`FETCH_1;
 			end
 			
-	   `MOD:begin
+	   	`MOD:begin
 				ALU_OP 		<= 	`ALU_MOD;
 				Bus_Select 	<= 	`BS_WV;
 				PCtrl  		<= 	`P_GSP;
@@ -408,7 +378,7 @@ module Control_Unit
 				NXTSTATE		<=		`FETCH_1;
 			end
 			
-	   `MSTP:begin
+	   	`MSTP:begin
 				ALU_OP 		<= 	`ALU_NONE;
 				Bus_Select 	<= 	`BS_AC;
 				PCtrl  		<= 	`P_GSP;
@@ -419,7 +389,7 @@ module Control_Unit
 				NXTSTATE		<=		`FETCH_1;
 			end	
 			
-	   `MRP:begin
+	   	`MRP:begin
 				ALU_OP 		<= 	`ALU_NONE;
 				Bus_Select 	<= 	`BS_AC;
 				PCtrl  		<= 	`P_GSP;
@@ -430,7 +400,7 @@ module Control_Unit
 				NXTSTATE		<=		`FETCH_1;
 			end	
 			
-	   `MCP:begin
+	   	`MCP:begin
 				ALU_OP 		<= 	`ALU_NONE;
 				Bus_Select 	<= 	`BS_AC;
 				PCtrl  		<= 	`P_GSP;
@@ -441,7 +411,7 @@ module Control_Unit
 				NXTSTATE		<=		`FETCH_1;
 			end	
 			
-	   `MWV:begin
+	   	`MWV:begin
 				ALU_OP 		<= 	`ALU_NONE;
 				Bus_Select 	<= 	`BS_AC;
 				PCtrl  		<= 	`P_GSP;
@@ -452,7 +422,7 @@ module Control_Unit
 				NXTSTATE		<=		`FETCH_1;
 			end	
 			
-	   `MEOPC:begin
+	   	`MEOPC:begin
 				ALU_OP 		<= 	`ALU_NONE;
 				Bus_Select 	<= 	`BS_AC;
 				PCtrl  		<= 	`P_GSP;
@@ -463,7 +433,7 @@ module Control_Unit
 				NXTSTATE		<=		`FETCH_1;
 			end
 			
-	   `MADDR:begin
+	   	`MADDR:begin
 				ALU_OP 		<= 	`ALU_NONE;
 				Bus_Select 	<= 	`BS_AC;
 				PCtrl  		<= 	`P_GSP;
@@ -474,7 +444,7 @@ module Control_Unit
 				NXTSTATE		<=		`FETCH_1;
 			end
 			
-	   `MCID:begin
+	   	`MCID:begin
 				ALU_OP 		<= 	`ALU_NONE;
 				Bus_Select 	<= 	`BS_AC;
 				PCtrl  		<= 	`P_GSP;
@@ -485,7 +455,7 @@ module Control_Unit
 				NXTSTATE		<=		`FETCH_1;
 			end	
 			
-	   `MMV:begin
+	   	`MMV:begin
 				ALU_OP 		<= 	`ALU_NONE;
 				Bus_Select 	<= 	`BS_AC;
 				PCtrl  		<= 	`P_GSP;
@@ -555,7 +525,7 @@ module Control_Unit
 				end
 				
 	
-   	`JMPZ1Y_1:begin
+   		`JMPZ1Y_1:begin
 				ALU_OP 		<= 	`ALU_NONE;
 				Bus_Select 	<= 	`BS_AC;
 				PCtrl  		<= 	`P_GSP;
@@ -574,7 +544,7 @@ module Control_Unit
 				INC_en  		<= 	14'd0 ;
 				RST_en  		<= 	14'd0 ;
 				WRT_en  		<= 	14'b00000000000001 ;
-//				WRT_en  		<= 	(14'd1 << `RO_PC) ;
+				//				WRT_en  		<= 	(14'd1 << `RO_PC) ;
 				NXTSTATE		<=		`JMPZ1Y_3;
 			end
 			

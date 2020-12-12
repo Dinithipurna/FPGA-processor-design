@@ -112,7 +112,7 @@ core #(8'd0) core0
 	.dacq(dramacq[0])
 );	
 
-core #(8'd2) core1
+core #(8'd1) core1
 (
 	.CLK(CLK),
 	.Idin(Idin1),

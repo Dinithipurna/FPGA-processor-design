@@ -6,7 +6,7 @@ module core
 (
 	input wire CLK,
 	input [7:0] Idin,Ddin,
-	input acq,
+	input iacq,dacq,
 	
 	
 	output [3:0] Mem_Ctrl,
@@ -41,7 +41,8 @@ module core
 		.INC_en(INC),
 		.RST_en(RST),
 		.MEMCtrl(Mem_Ctrl),
-		.acq(acq)
+		.iacq(iacq),
+		.dacq(dacq)
 		);
  	BUS_MUX 			BUS_MSelect(
 						.data0x(Ddin),

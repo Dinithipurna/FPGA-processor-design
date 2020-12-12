@@ -9,17 +9,20 @@ output [8:0] LEDG;
 output [17:0] LEDR;
 output [6:0] HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,HEX6,HEX7;
 
-wire CLK,dramwren;
-wire [2:0] dramacq;
+wire CLK,dramwren,iramwren;
+wire [1:0] dramacq,iramacq;
 wire [7:0] IAddress,IAddress0,IAddress1,Idin,Idin0,Idin1,DAddress,DAddress0,DAddress1;
-wire [3:0] Mem_Ctrl,Mem_Ctrl0,Mem_Ctrl1;
-wire [7:0] Ddin,Ddin1,Ddin0,Ddout,Ddout0,Ddout1;
+wire [3:0] Mem_Ctrl0,Mem_Ctrl1;
+wire [7:0] Ddin,Ddin1,Ddin0,Ddout,Ddout0,Ddout1,Idout;
 
 
  
 
 assign LEDG[8] = CLK;
-assign LEDG[3:0] = Mem_Ctrl;
+assign LEDG[2:0] = Mem_Ctrl0[2:0];
+assign LEDG[5:3] = Mem_Ctrl1[2:0];
+assign LEDG[7:6] = dramacq;
+assign LEDR[1:0] = iramacq;
 
 
 clkdiv clkdiv1(
@@ -50,7 +53,7 @@ DRAM DRAM1(
 
 	.data(Ddout),
 
-	.wren(Mem_Ctrl[1]),
+	.wren(dramwren),
 
 	.q(Ddin));
 
@@ -63,19 +66,34 @@ DRAM DRAM1(
 
 
 
-// MemController drammemc(
-// 	.rden({Mem_Ctrl0[0],Mem_Ctrl1[0]}),
-// 	.wren({Mem_Ctrl0[1],Mem_Ctrl1[1]}),
-// 	.Address({DAddress0,DAddress1}),
-// 	.Din({Ddout0,Ddout1}),
-// 	.RAMq(Ddin),
-// 	.clk(CLK),
-// 	.acq(dramacq),
-// 	.Dq({Ddin0,Ddin1}),
-// 	.RAMAddress(DAddress),
-// 	.RAMDin(Ddout),
-// 	.RAMwren(dramwren)
-// );
+MemController drammemc(
+	.rden({Mem_Ctrl1[0],Mem_Ctrl0[0]}),
+	.wren({Mem_Ctrl1[1],Mem_Ctrl0[1]}),
+	.Address({DAddress1,DAddress0}),
+	.Din({Ddout1,Ddout0}),
+	.RAMq(Ddin),
+	.clk(CLK),
+	.acq(dramacq),
+	.Dq({Ddin1,Ddin0}),
+	.RAMAddress(DAddress),
+	.RAMDin(Ddout),
+	.RAMwren(dramwren)
+);
+
+
+MemController irammemc(
+	.rden({Mem_Ctrl1[2],Mem_Ctrl0[2]}),
+	.wren({Mem_Ctrl1[3],Mem_Ctrl0[3]}),
+	.Address({IAddress1,IAddress0}),
+	.Din({8'd0,8'd0}),
+	.RAMq(Idin),
+	.clk(CLK),
+	.acq(iramacq),
+	.Dq({Idin1,Idin0}),
+	.RAMAddress(IAddress),
+	.RAMDin(Idout),
+	.RAMwren(iramwren)
+);
 
 
 
@@ -84,26 +102,28 @@ DRAM DRAM1(
 core #(8'd0) core0
 (
 	.CLK(CLK),
-	.Idin(Idin),
-	.Ddin(Ddin),
-	.Mem_Ctrl(Mem_Ctrl),
-	.IAddress(IAddress),
-	.DAddress(DAddress), 
-	.Ddout(Ddout),
-	.acq(1'b1)
+	.Idin(Idin0),
+	.Ddin(Ddin0),
+	.Mem_Ctrl(Mem_Ctrl0),
+	.IAddress(IAddress0),
+	.DAddress(DAddress0), 
+	.Ddout(Ddout0),
+	.iacq(iramacq[0]),
+	.dacq(dramacq[0])
 );	
 
-// core #(8'd1) core1
-// (
-// 	.CLK(CLK),
-// 	.Idin(Idin1),
-// 	.Ddin(Ddin1),
-// 	.Mem_Ctrl(Mem_Ctrl1),
-// 	.IAddress(IAddress1),
-// 	.DAddress(DAddress1), 
-// 	.Ddout(Ddout1),
-// 	.acq(dramacq[1])
-// );
+core #(8'd1) core1
+(
+	.CLK(CLK),
+	.Idin(Idin1),
+	.Ddin(Ddin1),
+	.Mem_Ctrl(Mem_Ctrl1),
+	.IAddress(IAddress1),
+	.DAddress(DAddress1), 
+	.Ddout(Ddout1),
+	.iacq(iramacq[1]),
+	.dacq(dramacq[1])
+);
 
 
 char7 C1(IAddress[3:0],HEX0);

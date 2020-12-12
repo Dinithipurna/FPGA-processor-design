@@ -32,7 +32,7 @@ module MemController
 	
 
 	// Determine the next state
-	always @ (negedge clk ) begin
+	always @ (posedge clk ) begin
 			case (state)
 				free:begin
 					acq 		<= 0;

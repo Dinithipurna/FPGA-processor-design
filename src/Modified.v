@@ -19,6 +19,7 @@ wire [7:0] Ddin,Ddin1,Ddin0,Ddout,Ddout0,Ddout1;
  
 
 assign LEDG[8] = CLK;
+assign LEDG[3:0] = Mem_Ctrl;
 
 
 clkdiv clkdiv1(
@@ -102,7 +103,24 @@ core #(8'd0) core0
 // 	.DAddress(DAddress1), 
 // 	.Ddout(Ddout1),
 // 	.acq(dramacq[1])
-// );	
+// );
+
+
+char7 C1(IAddress[3:0],HEX0);
+char7 C2(IAddress[7:4],HEX1);
+char7 C3(Idin[3:0],HEX2);
+char7 C4(Idin[7:4],HEX3);
+
+
+char7 C11(DAddress[3:0],HEX4);
+char7 C21(DAddress[7:4],HEX5);
+char7 C31(Ddin[3:0],HEX6);
+char7 C41(Ddin[7:4],HEX7);
+
+
+
+
+
 	
 	
 endmodule

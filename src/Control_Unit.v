@@ -5,6 +5,7 @@ module Control_Unit
 	input [7:0] INS,
 	input Z1, Z2, clk,
 	input iacq,dacq,
+	output reg busy = `BUSY,
 	output reg [2:0] ALU_OP = `ALU_NONE,
 	output reg [3:0] Bus_Select = `BS_AC,
 	output reg [1:0] PCtrl = `P_GSP,
@@ -31,7 +32,8 @@ module Control_Unit
 				INC_en  		<= 	14'd0 ;
 				RST_en  		<= 	14'd0 ;
 				WRT_en  		<= 	14'd0 ;
-				NXTSTATE		<=		`ENDOP;			
+				NXTSTATE		<=		`ENDOP;
+				busy			<=	`DONE;			
 			end
 				
 			
@@ -43,6 +45,7 @@ module Control_Unit
 				INC_en  		<= 	14'd0 ;
 				RST_en  		<= 	14'd0 ;
 				WRT_en  		<= 	14'd0 ;
+				busy			<=	`BUSY;			
 				if(iacq)
 					NXTSTATE	<=	`FETCH_2;
 				else

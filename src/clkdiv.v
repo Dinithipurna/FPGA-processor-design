@@ -1,11 +1,13 @@
 module clkdiv(
     input clk,
     input rst,
-	 input en,
-    output reg clk_div
+    input en,
+    input busy,
+    output reg clk_div,
+    output reg[31:0] clkcount
     ); 
 	 
-	 localparam constantNumber = 312500;
+	 localparam constantNumber = 500;
 	 reg [31:0] count;
  
 always @ (posedge(clk), posedge(rst))
@@ -27,6 +29,13 @@ begin
         clk_div <= ~clk_div;
     else
         clk_div <= clk_div;
+end
+
+
+always @(posedge(clk_div))
+begin
+    if(busy)
+        clkcount <= clkcount + 1 ;
 end
      
  

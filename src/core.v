@@ -8,7 +8,7 @@ module core
 	input [7:0] Idin,Ddin,
 	input iacq,dacq,
 	
-	
+	output busy,
 	output [3:0] Mem_Ctrl,
 	output [7:0] IAddress,DAddress, Ddout
 	
@@ -42,7 +42,8 @@ module core
 		.RST_en(RST),
 		.MEMCtrl(Mem_Ctrl),
 		.iacq(iacq),
-		.dacq(dacq)
+		.dacq(dacq),
+		.busy(busy)
 		);
  	BUS_MUX 			BUS_MSelect(
 						.data0x(Ddin),

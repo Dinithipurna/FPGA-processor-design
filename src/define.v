@@ -86,6 +86,12 @@
 
 
 
+//Busy and DOne
+`define BUSY 1'b1
+`define DONE 1'b0
+
+
+
 //Pointer Control definition
 `define P_GSP	2'd0
 `define P_RP	2'd1

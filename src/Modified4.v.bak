@@ -9,23 +9,23 @@ output [8:0] LEDG;
 output [17:0] LEDR;
 output [6:0] HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,HEX6,HEX7;
 
-wire CLK,dramwren,iramwren,busy0,busy1,busy2,busy3;
+wire CLK,dramwren,iramwren;
 wire [3:0] dramacq,iramacq;
 wire [7:0] IAddress,IAddress0,IAddress1,IAddress2,IAddress3,Idin,
 			Idin0,Idin1,Idin3,Idin2,DAddress,DAddress0,DAddress1,DAddress2,DAddress3;
 wire [3:0] Mem_Ctrl0,Mem_Ctrl1,Mem_Ctrl2,Mem_Ctrl3;
 wire [7:0] Ddin,Ddin3,Ddin2,Ddin1,Ddin0,Ddout,Ddout0,Ddout1,Ddout2,Ddout3,Idout;
 
-wire [31:0] clkcount;
+reg [31:0] clkcount;
 
 
  
 
 assign LEDG[8] = CLK;
-assign LEDG[0] = busy0;
-assign LEDG[1] = busy1;
-assign LEDG[2] = busy2;
-assign LEDG[3] = busy3;
+assign LEDG[2:0] = Mem_Ctrl0[2:0];
+assign LEDG[5:3] = Mem_Ctrl1[2:0];
+assign LEDG[7:6] = dramacq[1:0];
+assign LEDR[1:0] = iramacq[1:0];
 
 
 clkdiv clkdiv1(
@@ -33,7 +33,6 @@ clkdiv clkdiv1(
     .rst(SW[17]),
 	 .en(SW[16]),
     .clk_div(CLK),
-	.busy(busy0||busy1||busy2||busy3),
 	.clkcount(clkcount)
 );	 
 
@@ -116,8 +115,7 @@ core #(8'd0) core0
 	.DAddress(DAddress0), 
 	.Ddout(Ddout0),
 	.iacq(iramacq[0]),
-	.dacq(dramacq[0]),
-	.busy(busy0)
+	.dacq(dramacq[0])
 );
 	
 
@@ -131,8 +129,7 @@ core #(8'd1) core1
 	.DAddress(DAddress1), 
 	.Ddout(Ddout1),
 	.iacq(iramacq[1]),
-	.dacq(dramacq[1]),
-	.busy(busy1)
+	.dacq(dramacq[1])
 );
 
 core #(8'd2) core2
@@ -145,8 +142,7 @@ core #(8'd2) core2
 	.DAddress(DAddress2), 
 	.Ddout(Ddout2),
 	.iacq(iramacq[2]),
-	.dacq(dramacq[2]),
-	.busy(busy2)
+	.dacq(dramacq[2])
 );	
 
 
@@ -160,8 +156,7 @@ core #(8'd3) core3
 	.DAddress(DAddress3), 
 	.Ddout(Ddout3),
 	.iacq(iramacq[3]),
-	.dacq(dramacq[3]),
-	.busy(busy3)
+	.dacq(dramacq[3])
 );
 
 

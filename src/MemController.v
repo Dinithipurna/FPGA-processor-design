@@ -48,8 +48,10 @@ module MemController
 					 Dq[7:0]    <= RAMq;
 					acq[0] 		<= 1;
 					
-					if(rden[0]==0 && wren[0]==0)
-						state <= free;
+					if(rden[0]==0 && wren[0]==0)begin
+						acq 	<= 0;
+						state 	<= next_state;
+					end
 					else
 						state <= ac0;
 				end
@@ -60,8 +62,10 @@ module MemController
 					 Dq[15:8]   <= RAMq;
 					acq[1] 		<= 1;
 					
-					if((rden[1]==0) && (wren[1]==0))
-						state <= free;
+					if((rden[1]==0) && (wren[1]==0))begin
+						acq 	<= 0;
+						state 	<= next_state;
+					end
 					else
 						state <= ac1;
 				end						
@@ -70,13 +74,48 @@ module MemController
 
 	
 	// Output depends only on the state
+	// always @ (state) begin
+	// 	if(rden[0]==1 || wren[0]==1)
+	// 		next_state <= ac0;
+	// 	else if (rden[1]==1 || wren[1]==1)
+	// 		next_state <= ac1;
+	// 	else
+	// 		next_state <= free;
+	// end
+
+
+
 	always @ (state) begin
+    if (state==ac0) begin
+		if (rden[1]==1 || wren[1]==1)
+			next_state <= ac1; 
+        else if(rden[0]==1 || wren[0]==1)
+			next_state <= ac0;
+        else
+			next_state <= free;
+		
+	end
+		
+        
+    else if (state==ac1) begin
 		if(rden[0]==1 || wren[0]==1)
 			next_state <= ac0;
 		else if (rden[1]==1 || wren[1]==1)
 			next_state <= ac1;
+        else
+			next_state <= free;
+	end
+        
+
+    else begin
+		if(rden[0]==1 || wren[0]==1)
+			next_state <= ac0;
+        else if (rden[1]==1 || wren[1]==1)
+			next_state <= ac1;
 		else
 			next_state <= free;
+	end
+        
 	end
 	
 	

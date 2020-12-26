@@ -1,9 +1,0 @@
-module global_var;
-	initial begin
-	reg ID1=0;
-	reg ID2=0;
-	reg DD1=0;
-	reg DD2=0;
-	
-	end
-endmodule

@@ -1,0 +1,41 @@
+|PART3
+S[0] => S[0].IN2
+S[1] => S[1].IN2
+U[0] => U[0].IN1
+U[1] => U[1].IN1
+V[0] => V[0].IN1
+V[1] => V[1].IN1
+W[0] => W[0].IN1
+W[1] => W[1].IN1
+M[0] <= mux:mod3.M
+M[1] <= mux:mod4.M
+
+
+|PART3|mux:mod1
+X => ~NO_FANOUT~
+Y => ~NO_FANOUT~
+S => ~NO_FANOUT~
+M <= <GND>
+
+
+|PART3|mux:mod2
+X => ~NO_FANOUT~
+Y => ~NO_FANOUT~
+S => ~NO_FANOUT~
+M <= <GND>
+
+
+|PART3|mux:mod3
+X => ~NO_FANOUT~
+Y => ~NO_FANOUT~
+S => ~NO_FANOUT~
+M <= <GND>
+
+
+|PART3|mux:mod4
+X => ~NO_FANOUT~
+Y => ~NO_FANOUT~
+S => ~NO_FANOUT~
+M <= <GND>
+
+

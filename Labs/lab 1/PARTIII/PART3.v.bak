@@ -1,0 +1,12 @@
+module PART3(S,U,V,W,M);
+	input[1:0] S,U,V,W;
+	output[1:0] M;
+	
+	wire [1:0] Y;
+	
+	mux mod1=(.X(U(0)),.Y(V(0)),.S(S(0)),.M(Y(0)));
+	mux mod2=(.X(U(1)),.Y(V(1)),.S(S(0)),.M(Y(1)));
+	mux mod3=.X(Y(0)),.Y(W(0)),.S(S(1)),.M(M(0));
+	mux mod4=.X(Y(1)),.Y(W(1)),.S(S(1)),.M(M(1));
+	
+endmodule

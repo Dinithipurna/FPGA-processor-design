@@ -492,9 +492,9 @@ module Control_Unit
 				RST_en  		<= 	14'd0 ;
 				WRT_en  		<= 	14'd0 ;
 				if(dacq)
-					NXTSTATE	<=		`STSP_2;
-				else
 					NXTSTATE	<=		`FETCH_1;
+				else
+					NXTSTATE	<=		`STSP_2;
 			end
 			
 	   	`ADD:begin

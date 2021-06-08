@@ -9,7 +9,7 @@ output [8:0] LEDG;
 output [17:0] LEDR;
 output [6:0] HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,HEX6,HEX7;
 
-wire CLK,dramwren,iramwren,busy0,busy1,busy2,busy3;
+wire CLK1,CLK,dramwren,iramwren,busy0,busy1,busy2,busy3;
 wire [3:0] dramacq,iramacq;
 wire [7:0] IAddress,IAddress0,IAddress1,IAddress2,IAddress3,Idin,
 			Idin0,Idin1,Idin3,Idin2,DAddress,DAddress0,DAddress1,DAddress2,DAddress3;
@@ -28,8 +28,11 @@ assign LEDG[2] = busy2;
 assign LEDG[3] = busy3;
 
 
+PLL PLL1(.inclk0(CLOCK_50),	.c0(CLK1));
+
+
 clkdiv clkdiv1(
-    .clk(CLOCK_50),
+    .clk(CLK1),
     .rst(SW[17]),
 	 .en(SW[16]),
     .clk_div(CLK),

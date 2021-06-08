@@ -1,6 +1,3 @@
-`include "define.v"
- 
-
 module core
 #(
 	// Parameter Declarations

@@ -1,0 +1,21 @@
+`timescale 1ns/10ps
+ 
+`include "modified.v"
+
+module testbench();
+
+    reg clk;
+
+
+    initial begin
+        forever begin
+            #50
+            clk <= ~clk ;
+        end
+    end
+
+    modified mod1(.CLOCK_50(clk));
+
+
+
+endmodule

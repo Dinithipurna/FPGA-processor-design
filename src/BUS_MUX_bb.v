@@ -1,4 +1,4 @@
-// megafunction wizard: %LPM_MUX%
+// megafunction wizard: %LPM_MUX%VBB%
 // GENERATION: STANDARD
 // VERSION: WM1.0
 // MODULE: LPM_MUX 
@@ -17,7 +17,6 @@
 // 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 // ************************************************************
 
-
 //Copyright (C) 2019  Intel Corporation. All rights reserved.
 //Your use of Intel Corporation's design tools, logic functions 
 //and other software and tools, and any partner logic 
@@ -33,10 +32,6 @@
 //refer to the applicable agreement for further details, at
 //https://fpgasoftware.intel.com/eula.
 
-
-// synopsys translate_off
-`timescale 1 ps / 1 ps
-// synopsys translate_on
 module BUS_MUX (
 	data0x,
 	data10x,
@@ -69,41 +64,6 @@ module BUS_MUX (
 	input	[7:0]  data9x;
 	input	[3:0]  sel;
 	output	[7:0]  result;
-
-	wire [7:0] sub_wire14;
-	wire [7:0] sub_wire13 = data12x[7:0];
-	wire [7:0] sub_wire12 = data11x[7:0];
-	wire [7:0] sub_wire11 = data10x[7:0];
-	wire [7:0] sub_wire10 = data9x[7:0];
-	wire [7:0] sub_wire9 = data8x[7:0];
-	wire [7:0] sub_wire8 = data7x[7:0];
-	wire [7:0] sub_wire7 = data6x[7:0];
-	wire [7:0] sub_wire6 = data5x[7:0];
-	wire [7:0] sub_wire5 = data4x[7:0];
-	wire [7:0] sub_wire4 = data3x[7:0];
-	wire [7:0] sub_wire3 = data2x[7:0];
-	wire [7:0] sub_wire2 = data1x[7:0];
-	wire [7:0] sub_wire0 = data0x[7:0];
-	wire [103:0] sub_wire1 = {sub_wire13, sub_wire12, sub_wire11, sub_wire10, sub_wire9, sub_wire8, sub_wire7, sub_wire6, sub_wire5, sub_wire4, sub_wire3, sub_wire2, sub_wire0};
-	wire [7:0] result = sub_wire14[7:0];
-
-	lpm_mux	LPM_MUX_component (
-				.data (sub_wire1),
-				.sel (sel),
-				.result (sub_wire14)
-				// synopsys translate_off
-				,
-				.aclr (),
-				.clken (),
-				.clock ()
-				// synopsys translate_on
-				);
-	defparam
-		LPM_MUX_component.lpm_size = 13,
-		LPM_MUX_component.lpm_type = "LPM_MUX",
-		LPM_MUX_component.lpm_width = 8,
-		LPM_MUX_component.lpm_widths = 4;
-
 
 endmodule
 

@@ -1,4 +1,4 @@
-// megafunction wizard: %LPM_MUX%
+// megafunction wizard: %LPM_MUX%VBB%
 // GENERATION: STANDARD
 // VERSION: WM1.0
 // MODULE: LPM_MUX 
@@ -17,7 +17,6 @@
 // 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 // ************************************************************
 
-
 //Copyright (C) 2019  Intel Corporation. All rights reserved.
 //Your use of Intel Corporation's design tools, logic functions 
 //and other software and tools, and any partner logic 
@@ -33,10 +32,6 @@
 //refer to the applicable agreement for further details, at
 //https://fpgasoftware.intel.com/eula.
 
-
-// synopsys translate_off
-`timescale 1 ps / 1 ps
-// synopsys translate_on
 module Pointer_MUX (
 	data0x,
 	data1x,
@@ -51,32 +46,6 @@ module Pointer_MUX (
 	input	[7:0]  data3x;
 	input	[1:0]  sel;
 	output	[7:0]  result;
-
-	wire [7:0] sub_wire5;
-	wire [7:0] sub_wire4 = data3x[7:0];
-	wire [7:0] sub_wire3 = data2x[7:0];
-	wire [7:0] sub_wire2 = data1x[7:0];
-	wire [7:0] sub_wire0 = data0x[7:0];
-	wire [31:0] sub_wire1 = {sub_wire4, sub_wire3, sub_wire2, sub_wire0};
-	wire [7:0] result = sub_wire5[7:0];
-
-	lpm_mux	LPM_MUX_component (
-				.data (sub_wire1),
-				.sel (sel),
-				.result (sub_wire5)
-				// synopsys translate_off
-				,
-				.aclr (),
-				.clken (),
-				.clock ()
-				// synopsys translate_on
-				);
-	defparam
-		LPM_MUX_component.lpm_size = 4,
-		LPM_MUX_component.lpm_type = "LPM_MUX",
-		LPM_MUX_component.lpm_width = 8,
-		LPM_MUX_component.lpm_widths = 2;
-
 
 endmodule
 

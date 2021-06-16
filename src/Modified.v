@@ -1,9 +1,11 @@
 `include "define.v"
  
 
-module Modified(CLOCK_50,Ddin);
+module Modified(CLOCK_50,rst,en,Ddin);
 
 input CLOCK_50;
+input rst;
+input en;
 // input  [17:0] SW;
 // output [8:0] LEDG;
 // output [17:0] LEDR;
@@ -28,8 +30,8 @@ wire [31:0] clkcount;
 
 clkdiv clkdiv1(
     .clk(CLOCK_50),
-    .rst(1'b0),
-	 .en(1'b1),
+    .rst(rst),
+	 .en(en),
     .clk_div(CLK),
 	.busy(busy0||busy1),
 	.clkcount(clkcount)

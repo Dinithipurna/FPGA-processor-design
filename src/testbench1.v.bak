@@ -1,0 +1,33 @@
+`timescale 1ns/10ps
+ 
+`include "define.v"
+ 
+module testbench1();
+
+    reg clk = 0;
+    reg rst =1'b0;
+    reg en=1'b1;
+    reg busy=1'b1;
+    wire clk_div;
+    wire[31:0] clkcount;
+
+
+    initial begin
+        forever begin
+            #500
+            clk <= ~clk ;
+        end
+    end
+
+   clkdiv clkdiv1(
+    .clk(CLOCK_50),
+    .rst(1'b0),
+	 .en(1'b1),
+    .clk_div(CLK),
+	.busy(busy0||busy1),
+	.clkcount(clkcount)
+);	
+
+
+
+endmodule

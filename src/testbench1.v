@@ -2,22 +2,24 @@
  
 `include "define.v"
  
-
-
-module testbench();
+module testbench1();
 
     reg clk = 0;
-	 reg rst =1'b0;
+    reg rst =1'b0;
     reg en=1'b1;
-	 wire [7:0] Ddin=8'b00000000;
+    reg busy=1'b1;
+    wire clk_div;
+    wire[31:0] clkcount;
 
 
     initial begin
 		rst=1'b1;
 		en=1'b1;
+		busy=1'b1;
 		#20
 		rst=1'b0;
 		en=1'b1;
+		busy=1'b1;
 		#20
         forever begin
             #500
@@ -25,7 +27,14 @@ module testbench();
         end
     end
 
-    Modified mod1(.CLOCK_50(clk),.Ddin(Ddin),.rst(rst),.en(en));
+   clkdiv clkdiv1(
+    .clk(clk),
+    .rst(rst),
+	 .en(en),
+    .clk_div(clk_div),
+	.busy(busy),
+	.clkcount(clkcount)
+);	
 
 
 

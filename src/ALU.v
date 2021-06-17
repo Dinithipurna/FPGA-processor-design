@@ -20,6 +20,7 @@ always @(posedge Clk)
 							if (Wen==1)   dout <= BusOut;
 							else if (INC==1)  dout <= dout+8'd1;
 							else if (RST==1)   dout <= 8'd0;
+							else dout <= dout ;
 						end
 					`ALU_ADD:
 						dout <= dout + BusOut;

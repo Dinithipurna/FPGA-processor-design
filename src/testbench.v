@@ -7,7 +7,6 @@
 module testbench();
 
     reg clk = 0;
-	 wire [7:0] Ddin =0;
 
 
     initial begin
@@ -17,7 +16,7 @@ module testbench();
         end
     end
 
-    singlecore mod1(.CLOCK_50(clk),.Ddin(Ddin));
+    Modified4 mod1(.CLOCK_50(clk));
 
     initial begin
         #(500000);

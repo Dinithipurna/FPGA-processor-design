@@ -1,11 +1,11 @@
 `include "define.v"
  
 
-module singlecore(CLOCK_50,Ddin);
+module singlecore(CLOCK_50);
 
 input CLOCK_50;
 
-output [7:0] Ddin;
+wire [7:0] Ddin;
 
 wire CLK,busy0;
 wire [2:0] dramacq;
@@ -49,7 +49,8 @@ DRAM DRAM1(
 
 	.wren(Mem_Ctrl[1]),
 
-	.q(Ddin));
+	.q(Ddin)
+);
 
 core #(8'd0) core0
 (

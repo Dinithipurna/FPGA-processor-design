@@ -90,7 +90,7 @@ module DRAM (
 `ifdef NO_PLI
 		altsyncram_component.init_file = "../../src/DRAM_Init.rif"
 `else
-		altsyncram_component.init_file = "DRAM_Init.hex"
+		altsyncram_component.init_file = "DRAM_Init.mif"
 `endif
 ,
 		altsyncram_component.intended_device_family = "Cyclone IV E",

@@ -1,13 +1,9 @@
 `include "define.v"
  
 
-module Modified4(CLOCK_50,LEDG,LEDR,SW,HEX4,HEX5,HEX6,HEX7,HEX0,HEX1,HEX2,HEX3);
+module Modified4(CLOCK_50);
 
 input CLOCK_50;
-input  [17:0] SW;
-output [8:0] LEDG;
-output [17:0] LEDR;
-output [6:0] HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,HEX6,HEX7;
 
 wire CLK1,CLK,dramwren,iramwren,busy0,busy1,busy2,busy3;
 wire [3:0] dramacq,iramacq;
@@ -19,22 +15,13 @@ wire [7:0] Ddin,Ddin3,Ddin2,Ddin1,Ddin0,Ddout,Ddout0,Ddout1,Ddout2,Ddout3,Idout;
 wire [31:0] clkcount;
 
 
- 
 
-assign LEDG[8] = CLK;
-assign LEDG[0] = busy0;
-assign LEDG[1] = busy1;
-assign LEDG[2] = busy2;
-assign LEDG[3] = busy3;
-
-
-PLL PLL1(.inclk0(CLOCK_50),	.c0(CLK1));
 
 
 clkdiv clkdiv1(
-    .clk(CLK1),
-    .rst(SW[17]),
-	 .en(SW[16]),
+    .clk(CLOCK_50),
+    .rst(1'b0),
+	 .en(1'b1),
     .clk_div(CLK),
 	.busy(busy0||busy1||busy2||busy3),
 	.clkcount(clkcount)
@@ -167,17 +154,6 @@ core #(8'd3) core3
 	.busy(busy3)
 );
 
-
-char7 C1(clkcount[3:0],HEX0);
-char7 C2(clkcount[7:4],HEX1);
-char7 C3(clkcount[11:8],HEX2);
-char7 C4(clkcount[15:12],HEX3);
-
-
-char7 C11(clkcount[19:16],HEX4);
-char7 C21(clkcount[23:20],HEX5);
-char7 C31(clkcount[27:24],HEX6);
-char7 C41(clkcount[31:28],HEX7);
 
 
 

@@ -82,8 +82,9 @@ module MemController
 					RAMAddress 	<= Address[7:0];
 					RAMDin		<= Din[7:0];
 					RAMwren		<= wren[0];
-					 Dq[7:0]    <= RAMq;
+					Dq[7:0]    	<= RAMq;
 					acq[0] 		<= 1;
+					acq[1] 		<= 0;
 					
 					
 				end
@@ -91,27 +92,15 @@ module MemController
 					RAMAddress 	<= Address[15:8];
 					RAMDin		<= Din[15:8];
 					RAMwren		<= wren[1];
-					 Dq[15:8]   <= RAMq;
+					Dq[15:8]   	<= RAMq;
+					acq[0] 		<= 0;
 					acq[1] 		<= 1;
 					
 				end						
 			endcase
 	end
 
-	
-	// Output depends only on the state
-	// always @ (state) begin
-	// 	if(rden[0]==1 || wren[0]==1)
-	// 		next_state <= ac0;
-	// 	else if (rden[1]==1 || wren[1]==1)
-	// 		next_state <= ac1;
-	// 	else
-	// 		next_state <= free;
-	// end
-	
-	
-	
-	
+
 	
 
 endmodule

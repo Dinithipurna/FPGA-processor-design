@@ -12,12 +12,17 @@ module testbench();
 
     initial begin
         forever begin
-            #500
+            #(500);
             clk <= ~clk ;
         end
     end
 
-    Modified mod1(.CLOCK_50(clk),.Ddin(Ddin));
+    singlecore mod1(.CLOCK_50(clk),.Ddin(Ddin));
+
+    initial begin
+        #(500000);
+        $stop;
+    end
 
 
 

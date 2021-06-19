@@ -34,12 +34,15 @@ module ALU_tb ();
 		#(CLK_P*3);
 
         @(posedge Clk);
-        Wen <= 1'b1;
+        Wen <= 1'b0;
         BusOut <= 8'd35;
+        alu_op <= 3'b001;
 
         @(posedge Clk);
         Wen <= 1'b0;
         BusOut <= 8'd45;
+        alu_op <= 3'b000;
+
 
         @(posedge Clk);
         INC <= 1'b1;

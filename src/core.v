@@ -11,8 +11,8 @@ module core
 	input [7:0] Idin,Ddin,
 	input iacq,dacq,
 	
-	output busy = 1'b1,
-	output [3:0] Mem_Ctrl = `MEM_IDLE,
+	output busy,
+	output [3:0] Mem_Ctrl,
 	output [7:0] IAddress,DAddress, Ddout
 	
 

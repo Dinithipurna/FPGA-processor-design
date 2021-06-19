@@ -138,6 +138,16 @@ core #(8'd2) core2
 );	
 
 
+char7 C1(clkcount[3:0],HEX0);
+char7 C2(clkcount[7:4],HEX1);
+char7 C3(clkcount[11:8],HEX2);
+char7 C4(clkcount[15:12],HEX3);
+
+
+char7 C11(clkcount[19:16],HEX4);
+char7 C21(clkcount[23:20],HEX5);
+char7 C31(clkcount[27:24],HEX6);
+char7 C41(clkcount[31:28],HEX7);
 
 
 

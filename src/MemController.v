@@ -34,19 +34,21 @@ module MemController
 	always @(posedge clk) begin
 		case(state)
 			ac0 : begin
-				if (rden[1]==1 || wren[1]==1)
-					next_state = ac1; 
-				else if(rden[0]==1 || wren[0]==1)
+				if(rden[0]==1 || wren[0]==1)
 					next_state = ac0;
+				else if (rden[1]==1 || wren[1]==1)
+					next_state = ac1; 
+				
 				else
 					next_state = free;
 			end
 
 			ac1: begin
-				if(rden[0]==1 || wren[0]==1)
-					next_state = ac0;
-				else if (rden[1]==1 || wren[1]==1)
+				if (rden[1]==1 || wren[1]==1)
 					next_state = ac1;
+				else if(rden[0]==1 || wren[0]==1)
+					next_state = ac0;
+				
 				else
 					next_state = free;
 			end

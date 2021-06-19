@@ -1,13 +1,9 @@
 `include "define.v"
  
 
-module Modified3(CLOCK_50,LEDG,LEDR,SW,HEX4,HEX5,HEX6,HEX7,HEX0,HEX1,HEX2,HEX3);
+module Modified3(CLOCK_50);
 
 input CLOCK_50;
-input  [17:0] SW;
-output [8:0] LEDG;
-output [17:0] LEDR;
-output [6:0] HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,HEX6,HEX7;
 
 wire CLK,dramwren,iramwren,busy0,busy1,busy2;
 wire [2:0] dramacq,iramacq;
@@ -17,18 +13,13 @@ wire [7:0] Ddin,Ddin2,Ddin1,Ddin0,Ddout,Ddout0,Ddout1,Ddout2,Idout;
 
 wire [31:0] clkcount;
 
- 
 
-assign LEDG[8] = CLK;
-assign LEDG[0] = busy0;
-assign LEDG[1] = busy1;
-assign LEDG[2] = busy2;
 
 
 clkdiv clkdiv1(
     .clk(CLOCK_50),
-    .rst(SW[17]),
-	 .en(SW[16]),
+    .rst(1'b0),
+	 .en(1'b1),
     .clk_div(CLK),
 	.busy(busy0||busy1||busy2),
 	.clkcount(clkcount)

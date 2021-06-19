@@ -16,7 +16,7 @@ module testbench();
         end
     end
 
-    Modified4 mod1(.CLOCK_50(clk));
+    Modified3 mod1(.CLOCK_50(clk));
 
     initial begin
         #(500000);

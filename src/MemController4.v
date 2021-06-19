@@ -41,15 +41,27 @@ module MemController4
 				next_state = ac2;
 			else if (rden[3]==1 || wren[3]==1)
 				next_state = ac3;
-			else if(rden[0]==1 || wren[0]==1)
-				next_state = ac0;
 			else
 				next_state = free;
 			
 		end
 		ac1 : begin
-			if (rden[2]==1 || wren[2]==1)
+			if (rden[1]==1 || wren[1]==1)
+				next_state = ac1;
+			else if (rden[2]==1 || wren[2]==1)
 				next_state = ac2; 
+			else if (rden[3]==1 || wren[3]==1)
+				next_state = ac3;
+			else if(rden[0]==1 || wren[0]==1)
+				next_state = ac0;
+			
+			else
+				next_state = free;
+			
+		end
+		ac2 : begin
+			if (rden[2]==1 || wren[2]==1)
+				next_state = ac2;
 			else if (rden[3]==1 || wren[3]==1)
 				next_state = ac3;
 			else if(rden[0]==1 || wren[0]==1)
@@ -58,9 +70,8 @@ module MemController4
 				next_state = ac1;
 			else
 				next_state = free;
-			
 		end
-		ac2 : begin
+		ac3 : begin
 			if (rden[3]==1 || wren[3]==1)
 				next_state = ac3;
 			else if(rden[0]==1 || wren[0]==1)
@@ -69,18 +80,7 @@ module MemController4
 				next_state = ac1;
 			else if (rden[2]==1 || wren[2]==1)
 				next_state = ac2;
-			else
-				next_state = free;
-		end
-		ac3 : begin
-			if(rden[0]==1 || wren[0]==1)
-				next_state = ac0;
-			else if (rden[1]==1 || wren[1]==1)
-				next_state = ac1;
-			else if (rden[2]==1 || wren[2]==1)
-				next_state = ac2;
-			else if (rden[3]==1 || wren[3]==1)
-				next_state = ac3;
+			
 			else
 				next_state = free;
 		end

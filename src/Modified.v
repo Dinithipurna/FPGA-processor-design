@@ -1,22 +1,20 @@
 `include "define.v"
  
 
-<<<<<<< HEAD
-module Modified(CLOCK_50,Ddout);
-=======
+
+
+
 module Modified(CLOCK_50);
->>>>>>> 90430d6c1048ab44eb1886c0006793fdbdc05316
+
 
 input CLOCK_50;
 // input  [17:0] SW;
 // output [8:0] LEDG;
 // output [17:0] LEDR;
 // output [6:0] HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,HEX6,HEX7;
-<<<<<<< HEAD
-output [7:0] Ddout;
-=======
+
 wire [7:0] Ddin;
->>>>>>> 90430d6c1048ab44eb1886c0006793fdbdc05316
+
 
 wire CLK,dramwren,iramwren,busy0,busy1;
 wire [1:0] dramacq,iramacq;
@@ -132,6 +130,8 @@ core #(8'd1) core1
 	.dacq(dramacq[1]),
 	.busy(busy1)
 );
+	
+
 
 
 // char7 C1(clkcount[3:0],HEX0);
@@ -144,11 +144,9 @@ core #(8'd1) core1
 // char7 C21(clkcount[23:20],HEX5);
 // char7 C31(clkcount[27:24],HEX6);
 // char7 C41(clkcount[31:28],HEX7);
-
-
-
-
-
-	
-	
 endmodule
+
+
+
+
+	

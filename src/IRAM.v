@@ -87,16 +87,16 @@ module IRAM (
 	defparam
 		altsyncram_component.clock_enable_input_a = "BYPASS",
 		altsyncram_component.clock_enable_output_a = "BYPASS",
-<<<<<<< HEAD
-		altsyncram_component.init_file = "IRAM_new_algo.hex",
-=======
+
+
+
 `ifdef NO_PLI
 		altsyncram_component.init_file = "../../src/IRAM_new_algo.rif"
 `else
 		altsyncram_component.init_file = "IRAM_new_algo.hex"
 `endif
 ,
->>>>>>> 90430d6c1048ab44eb1886c0006793fdbdc05316
+
 		altsyncram_component.intended_device_family = "Cyclone IV E",
 		altsyncram_component.lpm_hint = "ENABLE_RUNTIME_MOD=NO",
 		altsyncram_component.lpm_type = "altsyncram",

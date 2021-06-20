@@ -1,10 +1,4 @@
-`timescale 1ns/10ps
- 
-`include "define.v"
- 
-
-
-module testbench();
+module testbench_reg();
 
     reg clk = 0;
 

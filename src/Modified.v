@@ -1,14 +1,14 @@
 `include "define.v"
  
 
-module Modified(CLOCK_50,Ddin);
+module Modified(CLOCK_50,Ddout);
 
 input CLOCK_50;
 // input  [17:0] SW;
 // output [8:0] LEDG;
 // output [17:0] LEDR;
 // output [6:0] HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,HEX6,HEX7;
-output [7:0] Ddin;
+output [7:0] Ddout;
 
 wire CLK,dramwren,iramwren,busy0,busy1;
 wire [1:0] dramacq,iramacq;

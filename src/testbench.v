@@ -7,10 +7,6 @@
 module testbench();
 
     reg clk = 0;
-	 //reg rst =1'b0;
-    //reg en=1'b1;
-	 wire [7:0] Ddout;
-	 
 
     initial begin
 		//rst=1'b1;
@@ -20,12 +16,18 @@ module testbench();
 		//en=1'b1;
 		//#20
         forever begin
-            #500
+            #(500);
             clk <= ~clk ;
         end
     end
 
-    Modified mod1(.CLOCK_50(clk),.Ddout(Ddout));
+
+    Modified3 mod1(.CLOCK_50(clk));
+
+    initial begin
+        #(500000);
+        $stop;
+    end
 
 
 

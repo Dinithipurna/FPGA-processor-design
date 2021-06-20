@@ -87,9 +87,18 @@ module DRAM (
 	defparam
 		altsyncram_component.clock_enable_input_a = "BYPASS",
 		altsyncram_component.clock_enable_output_a = "BYPASS",
+<<<<<<< HEAD
 		altsyncram_component.init_file = "DRAM_Init.hex",
+=======
+`ifdef NO_PLI
+		altsyncram_component.init_file = "../../src/DRAM_Init.rif"
+`else
+		altsyncram_component.init_file = "DRAM_Init.mif"
+`endif
+,
+>>>>>>> 90430d6c1048ab44eb1886c0006793fdbdc05316
 		altsyncram_component.intended_device_family = "Cyclone IV E",
-		altsyncram_component.lpm_hint = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=DRAM",
+		altsyncram_component.lpm_hint = "ENABLE_RUNTIME_MOD=NO",
 		altsyncram_component.lpm_type = "altsyncram",
 		altsyncram_component.numwords_a = 256,
 		altsyncram_component.operation_mode = "SINGLE_PORT",
@@ -124,10 +133,10 @@ endmodule
 // Retrieval info: PRIVATE: INIT_FILE_LAYOUT STRING "PORT_A"
 // Retrieval info: PRIVATE: INIT_TO_SIM_X NUMERIC "0"
 // Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone IV E"
-// Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "1"
-// Retrieval info: PRIVATE: JTAG_ID STRING "DRAM"
+// Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
+// Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 // Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
-// Retrieval info: PRIVATE: MIFfilename STRING "../../src/DRAM_Init.mif"
+// Retrieval info: PRIVATE: MIFfilename STRING "../../src/DRAM_Init.hex"
 // Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "256"
 // Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "2"
 // Retrieval info: PRIVATE: READ_DURING_WRITE_MODE_PORT_A NUMERIC "3"
@@ -144,9 +153,9 @@ endmodule
 // Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
 // Retrieval info: CONSTANT: CLOCK_ENABLE_INPUT_A STRING "BYPASS"
 // Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_A STRING "BYPASS"
-// Retrieval info: CONSTANT: INIT_FILE STRING "../../src/DRAM_Init.mif"
+// Retrieval info: CONSTANT: INIT_FILE STRING "../../src/DRAM_Init.hex"
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone IV E"
-// Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=DRAM"
+// Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=NO"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "altsyncram"
 // Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "256"
 // Retrieval info: CONSTANT: OPERATION_MODE STRING "SINGLE_PORT"

@@ -24,7 +24,9 @@ module MemController
 
 	// Module Item(s)
 	
-	reg	[ncores-1:0]	state,next_state;
+	reg	[ncores-1:0] state=2'b00;
+	reg [ncores-1:0] next_state=2'b00;
+	reg [ncores-1:0] imediate_state=2'b01;
 
 	// Declare states
 	parameter free = 0, ac0 = 1, ac1 = 2;
@@ -70,7 +72,43 @@ module MemController
 						state <= ac1;
 				end						
 			endcase
-	end
+			
+//			if(imediate_state!=state) begin
+//				if (state==ac0) begin
+//					if (rden[1]==1 || wren[1]==1)
+//						next_state <= ac1; 
+//					  else if(rden[0]==1 || wren[0]==1)
+//						next_state <= ac0;
+//					  else
+//						next_state <= free;
+//					
+//				end
+//					
+//					  
+//				 else if (state==ac1) begin
+//					if(rden[0]==1 || wren[0]==1)
+//						next_state <= ac0;
+//					else if (rden[1]==1 || wren[1]==1)
+//						next_state <= ac1;
+//					  else
+//						next_state <= free;
+//				end
+//					  
+//
+//				 else begin
+//					if(rden[0]==1 || wren[0]==1)
+//						next_state <= ac0;
+//					  else if (rden[1]==1 || wren[1]==1)
+//						next_state <= ac1;
+//					else
+//						next_state <= free;
+//				end
+//				
+//				imediate_state <= state;
+//		end
+				
+			
+	//end
 
 	
 	// Output depends only on the state
@@ -85,38 +123,38 @@ module MemController
 
 
 
-	always @ (state) begin
-    if (state==ac0) begin
-		if (rden[1]==1 || wren[1]==1)
-			next_state <= ac1; 
-        else if(rden[0]==1 || wren[0]==1)
-			next_state <= ac0;
-        else
-			next_state <= free;
-		
-	end
-		
-        
-    else if (state==ac1) begin
-		if(rden[0]==1 || wren[0]==1)
-			next_state <= ac0;
-		else if (rden[1]==1 || wren[1]==1)
-			next_state <= ac1;
-        else
-			next_state <= free;
-	end
-        
-
-    else begin
-		if(rden[0]==1 || wren[0]==1)
-			next_state <= ac0;
-        else if (rden[1]==1 || wren[1]==1)
-			next_state <= ac1;
-		else
-			next_state <= free;
-	end
-        
-	end
+//	always @ (posedge clk) begin
+//    if (state==ac0) begin
+//		if (rden[1]==1 || wren[1]==1)
+//			next_state <= ac1; 
+//        else if(rden[0]==1 || wren[0]==1)
+//			next_state <= ac0;
+//        else
+//			next_state <= free;
+//		
+//	end
+//		
+//        
+//    else if (state==ac1) begin
+//		if(rden[0]==1 || wren[0]==1)
+//			next_state <= ac0;
+//		else if (rden[1]==1 || wren[1]==1)
+//			next_state <= ac1;
+//        else
+//			next_state <= free;
+//	end
+//        
+//
+//    else begin
+//		if(rden[0]==1 || wren[0]==1)
+//			next_state <= ac0;
+//        else if (rden[1]==1 || wren[1]==1)
+//			next_state <= ac1;
+//		else
+//			next_state <= free;
+//	end
+//        
+//	end
 	
 	
 	

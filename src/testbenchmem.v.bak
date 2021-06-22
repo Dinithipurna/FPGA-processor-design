@@ -1,0 +1,66 @@
+`include "define.v"
+ 
+
+module testbenchmem(
+);
+
+
+   // Input Ports
+	reg [ncores-1:0] rden;
+	reg [ncores-1:0] wren;
+	reg [15:0] Address;
+	reg [15:0] Din;
+	reg [7:0] RAMq;
+	reg clk;
+	
+
+	// Output Ports
+	wire [ncores-1:0] acq;
+	wire [15:0] Dq;
+	wire [7:0] RAMAddress;
+	wire [7:0] RAMDin;
+	wire RAMwren;
+
+
+    initial begin
+		rden=2'b0;wren==2'b0;Address=16'b1111000000001111;Din=16'b1111000000001111;Ramq=11111111;RAMwren=1'b1,clk=1'b1;
+		#10
+		rden=2'b0;wren==2'b0;Address=16'b1111000000001111;Din=16'b1111000000001111;Ramq=11111111;RAMwren=1'b1,clk<= ~clk;
+		#10
+		rden=2'b0;wren==2'b0;Address=16'b1111000000001111;Din=16'b1111000000001111;Ramq=11111111;RAMwren=1'b1,clk<= ~clk;
+		#10
+		rden=2'b1;wren==2'b0;Address=16'b1111000000001111;Din=16'b1111000000001111;Ramq=11111111;RAMwren=1'b1,clk<= ~clk;
+		#10
+		rden=2'b1;wren==2'b0;Address=16'b1111000000001111;Din=16'b1111000000001111;Ramq=11111111;RAMwren=1'b1,clk<= ~clk;
+		#10
+		rden=2'b1;wren==2'b0;Address=16'b1111000000001111;Din=16'b1111000000001111;Ramq=11111111;RAMwren=1'b1,clk<= ~clk;
+		#10
+		rden=2'b0;wren==2'b0;Address=16'b1111000000001111;Din=16'b1111000000001111;Ramq=11111111;RAMwren=1'b1,clk<= ~clk;
+		#10
+		rden=2'b0;wren==2'b0;Address=16'b1111000000001111;Din=16'b1111000000001111;Ramq=11111111;RAMwren=1'b1,clk<= ~clk;
+		#10
+		rden=2'b0;wren==2'b0;Address=16'b1111000000001111;Din=16'b1111000000001111;Ramq=11111111;RAMwren=1'b1,clk<= ~clk;
+		#10
+        forever begin
+            #500
+            clk <= ~clk ;
+        end
+    end
+
+    MemController drammemc(
+	.rden(rden),
+	.wren(wren),
+	.Address(address),
+	.Din(Din),
+	.RAMq(Ramq),
+	.clk(clk),
+	.acq(acq),
+	.Dq(Dq),
+	.RAMAddress(RAMAddress),
+	.RAMDin(RAMDin),
+	.RAMwren(RAMwren)
+);
+
+
+
+endmodule

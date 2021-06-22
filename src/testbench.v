@@ -9,7 +9,7 @@ module testbench();
     reg clk = 0;
 	 reg rst =1'b0;
     reg en=1'b1;
-	 wire [7:0] Ddin=8'b00000000;
+	 wire [7:0] Ddin;
 
 
     initial begin

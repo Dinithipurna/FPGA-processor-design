@@ -1,7 +1,7 @@
 `include "define.v"
  
 
-module Modified(CLOCK_50,rst,en,Ddin);
+module Modified(CLOCK_50,rst,en);
 
 input CLOCK_50;
 input rst;
@@ -10,11 +10,11 @@ input en;
 // output [8:0] LEDG;
 // output [17:0] LEDR;
 // output [6:0] HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,HEX6,HEX7;
-output [7:0] Ddin;
+//output [7:0] Ddin;
 
 wire CLK,dramwren,iramwren,busy0,busy1;
 wire [1:0] dramacq,iramacq;
-wire [7:0] IAddress,IAddress0,IAddress1,Idin,Idin0,Idin1,DAddress,DAddress0,DAddress1;
+wire [7:0] IAddress,IAddress0,IAddress1,Idin,Idin0,Idin1,DAddress,DAddress0,DAddress1,Ddin;
 wire [3:0] Mem_Ctrl0,Mem_Ctrl1;
 wire [7:0] Ddin1,Ddin0,Ddout,Ddout0,Ddout1,Idout;
 

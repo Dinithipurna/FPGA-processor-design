@@ -15,21 +15,61 @@ module MemController
 	
 
 	// Output Ports
-	output reg [ncores-1:0] acq,
-	output reg [15:0] Dq ,
-	output reg [7:0] RAMAddress,
-	output reg [7:0] RAMDin,
-	output reg RAMwren
+	output reg [ncores-1:0] acq = 0,
+	output reg [15:0] Dq = 16'd0,
+	output reg [7:0] RAMAddress = 8'd0,
+	output reg [7:0] RAMDin = 8'd0,
+	output reg RAMwren = 1'd0
 );
 
 	// Module Item(s)
 	
-	reg	[ncores-1:0] state=2'b00;
-	reg [ncores-1:0] next_state=2'b00;
-	reg [ncores-1:0] imediate_state=2'b01;
+	
 
 	// Declare states
 	parameter free = 0, ac0 = 1, ac1 = 2;
+
+	reg	[ncores-1:0]	state =  free ,next_state =  free;
+
+	always @(posedge clk) begin
+		case(state)
+			ac0 : begin
+				if(rden[0]==1 || wren[0]==1)
+					next_state = ac0;
+				else if (rden[1]==1 || wren[1]==1)
+					next_state = ac1; 
+				
+				else
+					next_state = free;
+			end
+
+			ac1: begin
+				if (rden[1]==1 || wren[1]==1)
+					next_state = ac1;
+				else if(rden[0]==1 || wren[0]==1)
+					next_state = ac0;
+				
+				else
+					next_state = free;
+			end
+
+			free : begin
+				if(rden[0]==1 || wren[0]==1)
+					next_state = ac0;
+				else if (rden[1]==1 || wren[1]==1)
+					next_state = ac1;
+				else
+					next_state = free;
+			end
+
+		endcase
+		
+	end
+
+
+	always @(posedge clk) begin
+		state <= next_state;
+	end
 
 	
 
@@ -38,127 +78,31 @@ module MemController
 			case (state)
 				free:begin
 					acq 		<= 0;
-					if(rden==0 && wren==0)
-						state <= free;
-					else
-						state <= next_state;
+
 				end		
 				ac0:begin
 					RAMAddress 	<= Address[7:0];
 					RAMDin		<= Din[7:0];
 					RAMwren		<= wren[0];
-					 Dq[7:0]    <= RAMq;
+					Dq[7:0]    	<= RAMq;
 					acq[0] 		<= 1;
+					acq[1] 		<= 0;
 					
-					if(rden[0]==0 && wren[0]==0)begin
-						acq 	<= 0;
-						state 	<= next_state;
-					end
-					else
-						state <= ac0;
+					
 				end
 				ac1:begin
 					RAMAddress 	<= Address[15:8];
 					RAMDin		<= Din[15:8];
 					RAMwren		<= wren[1];
-					 Dq[15:8]   <= RAMq;
+					Dq[15:8]   	<= RAMq;
+					acq[0] 		<= 0;
 					acq[1] 		<= 1;
 					
-					if((rden[1]==0) && (wren[1]==0))begin
-						acq 	<= 0;
-						state 	<= next_state;
-					end
-					else
-						state <= ac1;
 				end						
 			endcase
-			
-//			if(imediate_state!=state) begin
-//				if (state==ac0) begin
-//					if (rden[1]==1 || wren[1]==1)
-//						next_state <= ac1; 
-//					  else if(rden[0]==1 || wren[0]==1)
-//						next_state <= ac0;
-//					  else
-//						next_state <= free;
-//					
-//				end
-//					
-//					  
-//				 else if (state==ac1) begin
-//					if(rden[0]==1 || wren[0]==1)
-//						next_state <= ac0;
-//					else if (rden[1]==1 || wren[1]==1)
-//						next_state <= ac1;
-//					  else
-//						next_state <= free;
-//				end
-//					  
-//
-//				 else begin
-//					if(rden[0]==1 || wren[0]==1)
-//						next_state <= ac0;
-//					  else if (rden[1]==1 || wren[1]==1)
-//						next_state <= ac1;
-//					else
-//						next_state <= free;
-//				end
-//				
-//				imediate_state <= state;
-//		end
-				
-			
-	//end
-
-	
-	// Output depends only on the state
-	// always @ (state) begin
-	// 	if(rden[0]==1 || wren[0]==1)
-	// 		next_state <= ac0;
-	// 	else if (rden[1]==1 || wren[1]==1)
-	// 		next_state <= ac1;
-	// 	else
-	// 		next_state <= free;
-	// end
+	end
 
 
-
-//	always @ (posedge clk) begin
-//    if (state==ac0) begin
-//		if (rden[1]==1 || wren[1]==1)
-//			next_state <= ac1; 
-//        else if(rden[0]==1 || wren[0]==1)
-//			next_state <= ac0;
-//        else
-//			next_state <= free;
-//		
-//	end
-//		
-//        
-//    else if (state==ac1) begin
-//		if(rden[0]==1 || wren[0]==1)
-//			next_state <= ac0;
-//		else if (rden[1]==1 || wren[1]==1)
-//			next_state <= ac1;
-//        else
-//			next_state <= free;
-//	end
-//        
-//
-//    else begin
-//		if(rden[0]==1 || wren[0]==1)
-//			next_state <= ac0;
-//        else if (rden[1]==1 || wren[1]==1)
-//			next_state <= ac1;
-//		else
-//			next_state <= free;
-//	end
-//        
-//	end
-	
-	
-	
-	
 	
 
 endmodule

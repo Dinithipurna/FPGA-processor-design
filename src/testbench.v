@@ -9,7 +9,7 @@ module testbench();
     reg clk = 0;
 	 reg rst =1'b0;
     reg en=1'b1;
-	 wire [7:0] Ddin;
+	 //wire [7:0] Ddin;
 
 
     initial begin
@@ -25,7 +25,7 @@ module testbench();
         end
     end
 
-    Modified mod1(.CLOCK_50(clk),.Ddin(Ddin),.rst(rst),.en(en));
+    Modified mod1(.CLOCK_50(clk),.rst(rst),.en(en));
 
 
 

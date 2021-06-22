@@ -862,7 +862,7 @@ module Control_Unit
 					INC_en  		<= 	14'd0 ;
 					RST_en  		<= 	14'd0 ;
 					WRT_en  		<= 	14'd0 ;
-					NXTSTATE		<=		`JMP_3;
+					NXTSTATE		<=		`JMP_4;
 				end
 
 			`JMP_3:begin

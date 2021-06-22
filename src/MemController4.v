@@ -16,7 +16,7 @@ module MemController4
 
 	// Output Ports
 	output reg [ncores-1:0] acq = 0,
-	output reg  [31:0] Dq = 32'd0,
+	output [31:0] Dq,
 	output reg [7:0] RAMAddress = 8'd0,
 	output reg [7:0] RAMDin = 8'd0,
 	output reg RAMwren = 1'd0
@@ -29,7 +29,7 @@ module MemController4
 
 	reg	[ncores-1:0]	state =  free ,next_state =  free;
 
-	// assign Dq = {RAMq,RAMq,RAMq,RAMq};
+	assign Dq = {RAMq,RAMq,RAMq,RAMq};
 
 	
 	always @(*) begin
@@ -120,7 +120,7 @@ module MemController4
 					RAMAddress 	<= Address[7:0];
 					RAMDin		<= Din[7:0];
 					RAMwren		<= wren[0];
-					Dq[7:0]    	<= RAMq;
+					// Dq[7:0]    	<= RAMq;
 					acq[0] 		<= 1;
 					acq[1] 		<= 0;
 					acq[2] 		<= 0;
@@ -132,7 +132,7 @@ module MemController4
 					RAMAddress 	<= Address[15:8];
 					RAMDin		<= Din[15:8];
 					RAMwren		<= wren[1];
-					Dq[15:8]   	<= RAMq;
+					// Dq[15:8]   	<= RAMq;
 					acq[0] 		<= 0;
 					acq[1] 		<= 1;
 					acq[2] 		<= 0;
@@ -143,7 +143,7 @@ module MemController4
 					RAMAddress 	<= Address[23:16];
 					RAMDin		<= Din[23:16];
 					RAMwren		<= wren[2];
-					Dq[23:16]  	<= RAMq;
+					// Dq[23:16]  	<= RAMq;
 					acq[0] 		<= 0;
 					acq[1] 		<= 0;
 					acq[2] 		<= 1;
@@ -154,7 +154,7 @@ module MemController4
 					RAMAddress 	<= Address[31:24];
 					RAMDin		<= Din[31:24];
 					RAMwren		<= wren[3];
-					Dq[31:24]   <= RAMq;
+					// Dq[31:24]   <= RAMq;
 					acq[0] 		<= 0;
 					acq[1] 		<= 0;
 					acq[2] 		<= 0;

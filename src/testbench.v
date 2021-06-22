@@ -19,7 +19,7 @@ module testbench();
     Modified4 mod1(.CLOCK_50(clk));
 
     initial begin
-        #(500000);
+        #(500000000);
         $stop;
     end
 

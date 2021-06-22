@@ -78,7 +78,7 @@ MemController4 drammemc(
 );
 
 
-MemController4 irammemc(
+SIMD irammemc(
 	.rden({Mem_Ctrl3[2],Mem_Ctrl2[2],Mem_Ctrl1[2],Mem_Ctrl0[2]}),
 	.wren({Mem_Ctrl3[3],Mem_Ctrl2[3],Mem_Ctrl1[3],Mem_Ctrl0[3]}),
 	.Address({IAddress3,IAddress2,IAddress1,IAddress0}),

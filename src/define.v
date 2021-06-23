@@ -63,18 +63,22 @@
 `define JMPZ1Y_3	8'b10010111		//151
 `define JMPZ1N_1 	8'b10011000		//152
 `define JMPZ1Y_4	8'b10011001		//153
+`define JMPZ1N_2 	8'b10011010		//154
 `define JMPZ2    	8'b10011100		//156
 `define JMPZ2Y_1 	8'b10011101		//157
 `define JMPZ2Y_2	8'b10011110		//158
 `define JMPZ2Y_3	8'b10011111		//159
 `define JMPZ2N_1 	8'b10100000		//160
 `define JMPZ2Y_4	8'b10100001		//161
+`define JMPZ2N_2 	8'b10100010		//160
 `define JMP_1 		8'b10100100		//164
 `define JMP_2		8'b10100101		//165
 `define JMP_3		8'b10100110		//166
 `define JMP_4		8'b10100111		//167
 `define INCSTP      8'b10101000		//168
 `define MSTPAC      8'b10101100		//172
+`define JMP_5       8'b10101101     //173
+`define JMP_6       8'b10101110     //174
 
 
 //ALU operations definitions

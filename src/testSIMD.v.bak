@@ -6,7 +6,7 @@
 
 module testbench();
     reg [4-1:0] rden,wren,
-	reg wire [31:0] Address,
+	reg [31:0] Address,
 	reg [31:0] Din ,
 	reg [7:0] RAMq,
 	reg clk,

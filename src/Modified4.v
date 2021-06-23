@@ -85,6 +85,7 @@ SIMD irammemc(
 	.Din({32'd0}),
 	.RAMq(Idin),
 	.clk(CLK),
+	.dramacq(dramacq),
 	.acq(iramacq),
 	.Dq({Idin3,Idin2,Idin1,Idin0}),
 	.RAMAddress(IAddress),

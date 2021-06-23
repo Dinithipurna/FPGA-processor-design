@@ -12,6 +12,7 @@ module SIMD
 	input wire [31:0] Din ,
 	input [7:0] RAMq,
 	input clk,
+   input [ncores-1:0] dramacq,
 	
 
 	// Output Ports
@@ -35,44 +36,37 @@ module SIMD
 	always @(*) begin
 		case(state)
 		ac0 : begin
-            if(Address[7:0]==Address[15:8]==Address[23:16]==Address[31:24])
+            if(Address[7:0]==Address[15:8])//==Address[23:16]==Address[31:24])
                 next_state = ac4;
-            else begin
-                if(rden[0]==1 || wren[0]==1)
+            else if(rden[0]==1 || wren[0]==1)
 				next_state = ac0;
-                else if (rden[1]==1 || wren[1]==1)
-                    next_state = ac1; 
-                else if (rden[2]==1 || wren[2]==1)
-                    next_state = ac2;
-                else if (rden[3]==1 || wren[3]==1)
-                    next_state = ac3;
-                else
-                    next_state = free;
-                
-            end	
+            else if (rden[1]==1 || wren[1]==1)
+                next_state = ac1; 
+            else if (rden[2]==1 || wren[2]==1)
+                next_state = ac2;
+            else if (rden[3]==1 || wren[3]==1)
+                next_state = ac3;
+            else
+                next_state = free;	
 		end
 		ac1 : begin
-            if(Address[7:0]==Address[15:8]==Address[23:16]==Address[31:24])
+            if(Address[7:0]==Address[15:8])//==Address[23:16]==Address[31:24])
                 next_state = ac4;
-            else begin
-                if (rden[1]==1 || wren[1]==1)
-                    next_state = ac1;
-                else if (rden[2]==1 || wren[2]==1)
-                    next_state = ac2; 
-                else if (rden[3]==1 || wren[3]==1)
-                    next_state = ac3;
-                else if(rden[0]==1 || wren[0]==1)
-                    next_state = ac0;
-                
-                else
-                    next_state = free;
-            end
+            else if (rden[1]==1 || wren[1]==1)
+                next_state = ac1;
+            else if (rden[2]==1 || wren[2]==1)
+                next_state = ac2; 
+            else if (rden[3]==1 || wren[3]==1)
+                next_state = ac3;
+            else if(rden[0]==1 || wren[0]==1)
+                next_state = ac0;     
+            else
+                next_state = free;
 		end
 		ac2 : begin
-            if(Address[7:0]==Address[15:8]==Address[23:16]==Address[31:24])
-                next_state = ac4;
-            else begin
-                if (rden[2]==1 || wren[2]==1)
+            	if(Address[7:0]==Address[15:8])//==Address[23:16]==Address[31:24])
+                	next_state = ac4;
+                else if (rden[2]==1 || wren[2]==1)
                     next_state = ac2;
                 else if (rden[3]==1 || wren[3]==1)
                     next_state = ac3;
@@ -82,13 +76,11 @@ module SIMD
                     next_state = ac1;
                 else
                     next_state = free;
-            end
 		end
 		ac3 : begin
-            if(Address[7:0]==Address[15:8]==Address[23:16]==Address[31:24])
-                next_state = ac4;
-            else begin
-                if (rden[3]==1 || wren[3]==1)
+            	if(Address[7:0]==Address[15:8])//==Address[23:16]==Address[31:24])
+                	next_state = ac4;
+                else if (rden[3]==1 || wren[3]==1)
                     next_state = ac3;
                 else if(rden[0]==1 || wren[0]==1)
                     next_state = ac0;
@@ -96,14 +88,13 @@ module SIMD
                     next_state = ac1;
                 else if (rden[2]==1 || wren[2]==1)
                     next_state = ac2;
-                
                 else
                     next_state = free;
-            end
 		end
-		free : begin
-            
-                if(Address[7:0]==Address[15:8]==Address[23:16]==Address[31:24])
+		free : begin 
+				if (dramacq!=0)
+					next_state = free;
+                else if(Address[7:0]==Address[15:8])//)==Address[23:16]==Address[31:24])
                     next_state = ac4;
                 else if(rden[0]==1 || wren[0]==1)
                     next_state = ac0;
@@ -119,10 +110,11 @@ module SIMD
 		end
 
         ac4 : begin
-            if(Address[7:0]==Address[15:8]==Address[23:16]==Address[31:24])
-                next_state = ac4;
-            else begin
-                if(rden[0]==1 || wren[0]==1)
+				if (dramacq!=0)
+					next_state = free;
+                else if(Address[7:0]==Address[15:8])//==Address[23:16]==Address[31:24])
+                    next_state = ac4;
+                else if(rden[0]==1 || wren[0]==1)
                     next_state = ac0;
                 else if (rden[1]==1 || wren[1]==1)
                     next_state = ac1;
@@ -132,7 +124,6 @@ module SIMD
                     next_state = ac3;
                 else
                     next_state = free;
-            end
 		end
 
 		endcase	

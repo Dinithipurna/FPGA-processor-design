@@ -88,9 +88,9 @@ module DRAM (
 		altsyncram_component.clock_enable_input_a = "BYPASS",
 		altsyncram_component.clock_enable_output_a = "BYPASS",
 `ifdef NO_PLI
-		altsyncram_component.init_file = "../../src/DRAM_Init.rif"
+		altsyncram_component.init_file = "../../src/DRAM_sample.rif"
 `else
-		altsyncram_component.init_file = "DRAM_Init.mif"
+		altsyncram_component.init_file = "DRAM_sample.mif"
 `endif
 ,
 		altsyncram_component.intended_device_family = "Cyclone IV E",

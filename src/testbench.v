@@ -21,8 +21,7 @@ module testbench();
         end
     end
 
-
-    Modified3 mod1(.CLOCK_50(clk));
+    Modified4 mod1(.CLOCK_50(clk));
 
 
 

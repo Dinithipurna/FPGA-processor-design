@@ -60,7 +60,7 @@ module Control_Unit
 					INC_en  		<= 	14'd0 ;
 					RST_en  		<= 	14'd0 ;
 					WRT_en  		<= 	14'd0 ;
-					NXTSTATE		<=	`FETCH_3;			
+					NXTSTATE		<=	`FETCH_4;			
 				end
 
 			`FETCH_3:begin
@@ -124,7 +124,7 @@ module Control_Unit
 					PCtrl  		<= 	`P_GSP;
 					MEMCtrl 		<= 	`MEM_IDLE;
 					INC_en  		<= 	14'd0 ;
-					RST_en  		<= 	14'b000000000000100 ;
+					RST_en  		<= 	14'b00000000000100 ;
 					WRT_en  		<= 	14'd0 ;
 					NXTSTATE		<=		`FETCH_1;
 				end
@@ -249,7 +249,7 @@ module Control_Unit
 					INC_en  		<= 	14'd0 ;
 					RST_en  		<= 	14'd0 ;
 					WRT_en  		<= 	14'd0 ;
-					NXTSTATE		<=		`LDADDR_3;	
+					NXTSTATE		<=		`LDADDR_4;	
 				end
 			
 			`LDADDR_3:begin
@@ -298,7 +298,7 @@ module Control_Unit
 					INC_en  		<= 	14'd0 ;
 					RST_en  		<= 	14'd0 ;
 					WRT_en  		<= 	14'd0 ;
-					NXTSTATE		<=	`LDAC_3;
+					NXTSTATE		<=	`LDAC_4;
 				end
 
 			`LDAC_3:begin
@@ -345,7 +345,7 @@ module Control_Unit
 					INC_en  		<= 	14'd0 ;
 					RST_en  		<= 	14'd0 ;
 					WRT_en  		<= 	14'd0 ;
-					NXTSTATE		<=	`LDMULR_3;
+					NXTSTATE		<=	`LDMULR_4;
 				end
 
 			`LDMULR_3:begin
@@ -393,7 +393,7 @@ module Control_Unit
 					INC_en  		<= 	14'd0 ;
 					RST_en  		<= 	14'd0 ;
 					WRT_en  		<= 	14'd0 ;
-					NXTSTATE		<=	`LDRP_3;
+					NXTSTATE		<=	`LDRP_4;
 				end
 
 			`LDRP_3:begin
@@ -441,7 +441,7 @@ module Control_Unit
 					INC_en  		<= 	14'd0 ;
 					RST_en  		<= 	14'd0 ;
 					WRT_en  		<= 	14'd0 ;
-					NXTSTATE		<=		`LDCP_3;
+					NXTSTATE		<=		`LDCP_4;
 				end
 
 			`LDCP_3:begin
@@ -721,7 +721,7 @@ module Control_Unit
 					INC_en  		<= 	14'd0 ;
 					RST_en  		<= 	14'd0 ;
 					WRT_en  		<= 	14'd0 ;
-					NXTSTATE		<=		`JMPZ1Y_3;		
+					NXTSTATE		<=		`JMPZ1Y_4;		
 				end
 
 			`JMPZ1Y_3 : begin
@@ -798,7 +798,7 @@ module Control_Unit
 					INC_en  		<= 	14'd0 ;
 					RST_en  		<= 	14'd0 ;
 					WRT_en  		<= 	14'd0 ;
-					NXTSTATE		<=		`JMPZ2Y_3;		
+					NXTSTATE		<=		`JMPZ2Y_4;		
 				end
 
 			`JMPZ2Y_3 : begin
@@ -862,7 +862,7 @@ module Control_Unit
 					INC_en  		<= 	14'd0 ;
 					RST_en  		<= 	14'd0 ;
 					WRT_en  		<= 	14'd0 ;
-					NXTSTATE		<=		`JMP_3;
+					NXTSTATE		<=		`JMP_4;
 				end
 
 			`JMP_3:begin

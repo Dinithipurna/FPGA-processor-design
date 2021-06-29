@@ -721,7 +721,7 @@ module Control_Unit
 					INC_en  		<= 	14'd0 ;
 					RST_en  		<= 	14'd0 ;
 					WRT_en  		<= 	14'd0 ;
-					NXTSTATE		<=		`JMPZ1Y_4;		
+					NXTSTATE		<=		`JMPZ1Y_3;		
 				end
 
 			`JMPZ1Y_3 : begin
@@ -731,7 +731,7 @@ module Control_Unit
 					MEMCtrl 		<= 	`MEM_IDLE;
 					INC_en  		<= 	14'd0 ;
 					RST_en  		<= 	14'd0 ;
-					WRT_en  		<= 	14'd0 ;
+					WRT_en  		<= 	14'b00000000000001 ;
 					NXTSTATE		<=		`JMPZ1Y_4;		
 				end
 			
@@ -743,8 +743,7 @@ module Control_Unit
 					MEMCtrl 		<= 	`MEM_IDLE;
 					INC_en  		<= 	14'd0 ;
 					RST_en  		<= 	14'd0 ;
-					WRT_en  		<= 	14'b00000000000001 ;
-					//				WRT_en  		<= 	(14'd1 << `RO_PC) ;
+					WRT_en  		<= 	14'd0 ;
 					NXTSTATE		<=		`FETCH_1;
 				end
 				
@@ -758,7 +757,18 @@ module Control_Unit
 					INC_en  		<= 	14'b00000000000001;
 					RST_en  		<= 	14'd0 ;
 					WRT_en  		<= 	14'b00000000000010 ;
-					NXTSTATE		<=		`FETCH_1;	
+					NXTSTATE		<=		`JMPZ1N_2;	
+				end
+
+			`JMPZ1N_2:begin
+					ALU_OP 			<= 	`ALU_NONE;
+					Bus_Select 		<= 	`BS_AC;
+					PCtrl  			<= 	`P_GSP;
+					MEMCtrl 		<= 	`MEM_IDLE;
+					INC_en  		<= 	14'd0 ;
+					RST_en  		<= 	14'd0 ;
+					WRT_en  		<= 	14'd0 ;
+					NXTSTATE		<=		`FETCH_1;
 				end
 				
 			`JMPZ2 : begin
@@ -798,7 +808,7 @@ module Control_Unit
 					INC_en  		<= 	14'd0 ;
 					RST_en  		<= 	14'd0 ;
 					WRT_en  		<= 	14'd0 ;
-					NXTSTATE		<=		`JMPZ2Y_4;		
+					NXTSTATE		<=		`JMPZ2Y_3;		
 				end
 
 			`JMPZ2Y_3 : begin
@@ -808,7 +818,7 @@ module Control_Unit
 					MEMCtrl 		<= 	`MEM_IDLE;
 					INC_en  		<= 	14'd0 ;
 					RST_en  		<= 	14'd0 ;
-					WRT_en  		<= 	14'd0 ;
+					WRT_en  		<= 	14'b00000000000001 ;
 					NXTSTATE		<=		`JMPZ2Y_4;		
 				end
 
@@ -820,7 +830,7 @@ module Control_Unit
 					MEMCtrl 		<= 	`MEM_IDLE;
 					INC_en  		<= 	14'd0 ;
 					RST_en  		<= 	14'd0 ;
-					WRT_en  		<= 	14'b00000000000001 ;
+					WRT_en  		<= 	14'd0 ;
 					NXTSTATE		<=	`FETCH_1;
 					
 				end
@@ -835,7 +845,19 @@ module Control_Unit
 					INC_en  		<= 	14'b00000000000001 ;
 					RST_en  		<= 	14'd0 ;
 					WRT_en  		<= 	14'b00000000000010 ;
-					NXTSTATE		<=		`FETCH_1;
+					NXTSTATE		<=		`JMPZ2N_2;
+				end
+
+			`JMPZ2N_2:begin
+					ALU_OP 			<= 	`ALU_NONE;
+					Bus_Select 		<= 	`BS_AC;
+					PCtrl  			<= 	`P_GSP;
+					MEMCtrl 		<= 	`MEM_IDLE;
+					INC_en  		<= 	14'd0 ;
+					RST_en  		<= 	14'd0 ;
+					WRT_en  		<= 	14'd0 ;
+					NXTSTATE		<=	`FETCH_1;
+					
 				end
 				
 				
@@ -862,7 +884,7 @@ module Control_Unit
 					INC_en  		<= 	14'd0 ;
 					RST_en  		<= 	14'd0 ;
 					WRT_en  		<= 	14'd0 ;
-					NXTSTATE		<=		`JMP_4;
+					NXTSTATE		<=		`JMP_3;
 				end
 
 			`JMP_3:begin
@@ -872,9 +894,8 @@ module Control_Unit
 					MEMCtrl 		<= 	`MEM_IDLE;
 					INC_en  		<= 	14'd0 ;
 					RST_en  		<= 	14'd0 ;
-					WRT_en  		<= 	14'd0 ;
+					WRT_en  		<= 	14'd0  ;
 					NXTSTATE		<=		`JMP_4;
-
 				end
 				
 			`JMP_4:begin
@@ -883,8 +904,22 @@ module Control_Unit
 					PCtrl  			<= 	`P_GSP;
 					MEMCtrl 		<= 	`MEM_IDLE;
 					INC_en  		<= 	14'd0 ;
-					RST_en  		<= 	14'd0 ;
+					RST_en  		<= 	14'd0 ;					
 					WRT_en  		<= 	14'b00000000000001  ;
+					NXTSTATE		<=		`JMP_5;
+
+				end
+				
+			
+
+			`JMP_5:begin
+					ALU_OP 			<= 	`ALU_NONE;
+					Bus_Select 		<= 	`BS_AC;
+					PCtrl  			<= 	`P_GSP;
+					MEMCtrl 		<= 	`MEM_IDLE;
+					INC_en  		<= 	14'd0 ;
+					RST_en  		<= 	14'd0 ;
+					WRT_en  		<= 	14'd0  ;
 					NXTSTATE		<=		`FETCH_1;
 				end
 				

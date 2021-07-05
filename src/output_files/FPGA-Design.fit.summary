@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat Jun 19 15:16:20 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : FPGA-Design
+Top-level Entity Name : singlecore
+Family : Cyclone IV E
+Device : EP4CE75F29C7
+Timing Models : Final
+Total logic elements : 1,044 / 75,408 ( 1 % )
+    Total combinational functions : 1,007 / 75,408 ( 1 % )
+    Dedicated logic registers : 396 / 75,408 ( < 1 % )
+Total registers : 396
+Total pins : 102 / 427 ( 24 % )
+Total virtual pins : 0
+Total memory bits : 8,960 / 2,810,880 ( < 1 % )
+Embedded Multiplier 9-bit elements : 1 / 400 ( < 1 % )
+Total PLLs : 0 / 4 ( 0 % )

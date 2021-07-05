@@ -111,7 +111,7 @@ endmodule
 // CNX file retrieval info
 // ============================================================
 // Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone IV E"
-// Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "1"
+// Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
 // Retrieval info: PRIVATE: new_diagram STRING "1"
 // Retrieval info: LIBRARY: lpm lpm.lpm_components.all
 // Retrieval info: CONSTANT: LPM_SIZE NUMERIC "13"
@@ -153,6 +153,5 @@ endmodule
 // Retrieval info: GEN_FILE: TYPE_NORMAL BUS_MUX.cmp FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL BUS_MUX.bsf FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL BUS_MUX_inst.v FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL BUS_MUX_bb.v TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL BUS_MUX_syn.v TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL BUS_MUX_bb.v FALSE
 // Retrieval info: LIB_FILE: lpm

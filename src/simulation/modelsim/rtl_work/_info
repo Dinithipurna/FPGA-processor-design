@@ -1,0 +1,383 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/simulation/modelsim
+vALU
+Z1 !s110 1625370780
+!i10b 1
+!s100 8k]9f>fMA;>[?E<1ZK@@@2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Io^j@c3MoV1_=o]?TFI7Od3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1623149129
+8C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/ALU.v
+FC:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/ALU.v
+!i122 12
+L0 4 36
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1625370780.000000
+!s107 C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/define.v|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/ALU.v|
+!i113 1
+Z7 o-vlog01compat -work work
+Z8 !s92 -vlog01compat -work work +incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src
+Z9 tCvgOpt 0
+n@a@l@u
+vBUS_MUX
+Z10 !s110 1625370778
+!i10b 1
+!s100 Bcb27eD;?>:<d;zFEX7el1
+R2
+ILib^BccDbaJA^[M:ZEjbV2
+R3
+R0
+R4
+8C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/BUS_MUX.v
+FC:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/BUS_MUX.v
+!i122 3
+L0 40 69
+R5
+r1
+!s85 0
+31
+Z11 !s108 1625370778.000000
+!s107 C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/BUS_MUX.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/BUS_MUX.v|
+!i113 1
+R7
+R8
+R9
+n@b@u@s_@m@u@x
+vclkdiv
+Z12 !s110 1625370779
+!i10b 1
+!s100 ggJ6TCn@3?:]la2c`7YA?1
+R2
+Ib==NaGN>QTaTWSlj:@6LH2
+R3
+R0
+R4
+8C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/clkdiv.v
+FC:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/clkdiv.v
+!i122 8
+L0 1 42
+R5
+r1
+!s85 0
+31
+Z13 !s108 1625370779.000000
+!s107 C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/clkdiv.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/clkdiv.v|
+!i113 1
+R7
+R8
+R9
+vControl_Unit
+R12
+!i10b 1
+!s100 cm[9afDE^?YNCg^Y`XePS3
+R2
+IUPo^87H3>l509A`k6zK<b0
+R3
+R0
+R4
+8C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Control_Unit.v
+FC:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Control_Unit.v
+!i122 11
+L0 3 907
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/define.v|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Control_Unit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Control_Unit.v|
+!i113 1
+R7
+R8
+R9
+n@control_@unit
+vcore
+R12
+!i10b 1
+!s100 8Dhioc`NnzDma;L^TSB]>3
+R2
+IBjj5aP[RX@0RDbK24WcIi3
+R3
+R0
+R4
+8C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/core.v
+FC:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/core.v
+!i122 10
+L0 4 216
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/define.v|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/core.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/core.v|
+!i113 1
+R7
+R8
+R9
+vDRAM
+R10
+!i10b 1
+!s100 m=;8gS5KGc^QhU:7XUXLb2
+R2
+I:>cH7LEg8C_U63PVnT?I72
+R3
+R0
+R4
+8C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/DRAM.v
+FC:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/DRAM.v
+!i122 2
+Z14 L0 40 67
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/DRAM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/DRAM.v|
+!i113 1
+R7
+R8
+R9
+n@d@r@a@m
+vIRAM
+R10
+!i10b 1
+!s100 YTnXOSccaS_hHX<EhZQT83
+R2
+INPi`BPT3G=bIko]L]3=NF3
+R3
+R0
+R4
+8C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/IRAM.v
+FC:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/IRAM.v
+!i122 1
+R14
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/IRAM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/IRAM.v|
+!i113 1
+R7
+R8
+R9
+n@i@r@a@m
+vMemController
+R12
+!i10b 1
+!s100 bk6SLz8MlFz::k8=4UNIi1
+R2
+IS_55UObeXOQL5Kh^XUe6a3
+R3
+R0
+R4
+8C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/MemController.v
+FC:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/MemController.v
+!i122 7
+L0 1 126
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/MemController.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/MemController.v|
+!i113 1
+R7
+R8
+R9
+n@mem@controller
+vModified
+R12
+!i10b 1
+!s100 FO7hD56noofcP1K:ZnE7A2
+R2
+Im`8P9Q>1]CCC=bHD5?8De2
+R3
+R0
+R4
+8C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Modified.v
+FC:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Modified.v
+!i122 9
+L0 4 143
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/define.v|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Modified.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Modified.v|
+!i113 1
+R7
+R8
+R9
+n@modified
+vModule_Reg
+R12
+!i10b 1
+!s100 aTnY19`hJMG6d1EFN;WOX3
+R2
+I7SY7n^7iR0kiY2gbRTRPE3
+R3
+R0
+R4
+8C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Module_Reg.v
+FC:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Module_Reg.v
+!i122 6
+L0 1 13
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Module_Reg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Module_Reg.v|
+!i113 1
+R7
+R8
+R9
+n@module_@reg
+vModule_RegF
+R10
+!i10b 1
+!s100 ^^e_Nd1ES^OT`P0;J8n5>3
+R2
+IaNR[><njM3YB^oXRIE[oi3
+R3
+R0
+R4
+8C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Module_RegF.v
+FC:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Module_RegF.v
+!i122 5
+L0 1 27
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Module_RegF.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Module_RegF.v|
+!i113 1
+R7
+R8
+R9
+n@module_@reg@f
+vModule_RP_CP
+R10
+!i10b 1
+!s100 E`<:>]KO<j`S^FOVU2oJn3
+R2
+IJgo^l[HJkdOQ>R6?XPD:Z2
+R3
+R0
+R4
+8C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Module_RP_CP.v
+FC:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Module_RP_CP.v
+!i122 4
+L0 1 18
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Module_RP_CP.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Module_RP_CP.v|
+!i113 1
+R7
+R8
+R9
+n@module_@r@p_@c@p
+vPLL_altpll
+R1
+!i10b 1
+!s100 OF^8=B4>TY:eokfWd^IRB1
+R2
+IC8zM4ILiJ3_`8;8llMT6_3
+R3
+R0
+w1624773092
+8C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/db/pll_altpll.v
+FC:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/db/pll_altpll.v
+!i122 13
+L0 30 65
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/db|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/db/pll_altpll.v|
+!i113 1
+R7
+!s92 -vlog01compat -work work +incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/db
+R9
+n@p@l@l_altpll
+vPointer_MUX
+!s110 1625370777
+!i10b 1
+!s100 V7TZI9_8bL@7KNSm]O^5M1
+R2
+I;<hSBf<6B?05U5Q7Y?UK@1
+R3
+R0
+R4
+8C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Pointer_MUX.v
+FC:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Pointer_MUX.v
+!i122 0
+L0 40 42
+R5
+r1
+!s85 0
+31
+!s108 1625370777.000000
+!s107 C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Pointer_MUX.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Pointer_MUX.v|
+!i113 1
+R7
+R8
+R9
+n@pointer_@m@u@x
+vtestbench
+R1
+!i10b 1
+!s100 ja0=_W35Q8[G04LN<1O=T0
+R2
+ISSc>KPBiB^TUgC_NbMo1d3
+R3
+R0
+R4
+8C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/testbench.v
+FC:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/testbench.v
+!i122 14
+L0 7 18
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/define.v|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/testbench.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src|C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/testbench.v|
+!i113 1
+R7
+R8
+R9

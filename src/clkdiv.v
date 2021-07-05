@@ -8,7 +8,7 @@ module clkdiv(
     ); 
 	 
 	 localparam constantNumber = 4;
-	 reg [31:0] count = 0;
+	 reg [31:0] count;
  
 always @ (posedge(clk), posedge(rst))
 begin

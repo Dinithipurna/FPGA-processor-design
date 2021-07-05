@@ -1,0 +1,24 @@
+
+State Machine - |Modified16|MemController8:irammemc|state
+Name state.ac6 state.ac5 state.ac4 state.ac3 state.ac2 state.ac1 state.ac0 state.free state.ac7 
+state.free 0 0 0 0 0 0 0 0 0 
+state.ac0 0 0 0 0 0 0 1 1 0 
+state.ac1 0 0 0 0 0 1 0 1 0 
+state.ac2 0 0 0 0 1 0 0 1 0 
+state.ac3 0 0 0 1 0 0 0 1 0 
+state.ac4 0 0 1 0 0 0 0 1 0 
+state.ac5 0 1 0 0 0 0 0 1 0 
+state.ac6 1 0 0 0 0 0 0 1 0 
+state.ac7 0 0 0 0 0 0 0 1 1 
+
+State Machine - |Modified16|MemController8:drammemc|state
+Name state.ac6 state.ac5 state.ac4 state.ac3 state.ac2 state.ac1 state.ac0 state.free state.ac7 
+state.free 0 0 0 0 0 0 0 0 0 
+state.ac0 0 0 0 0 0 0 1 1 0 
+state.ac1 0 0 0 0 0 1 0 1 0 
+state.ac2 0 0 0 0 1 0 0 1 0 
+state.ac3 0 0 0 1 0 0 0 1 0 
+state.ac4 0 0 1 0 0 0 0 1 0 
+state.ac5 0 1 0 0 0 0 0 1 0 
+state.ac6 1 0 0 0 0 0 0 1 0 
+state.ac7 0 0 0 0 0 0 0 1 1 

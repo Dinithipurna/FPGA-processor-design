@@ -1,5 +1,5 @@
 # Reading pref.tcl
-# do FPGAdesign_run_msim_rtl_verilog.do
+# do Singlecore-hasini_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
@@ -10,187 +10,40 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src {C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Pointer_MUX.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/inesh/Documents/Singlecore-Hasini {C:/Users/inesh/Documents/Singlecore-Hasini/define.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:57 on Jul 04,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src" C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Pointer_MUX.v 
-# -- Compiling module Pointer_MUX
-# 
-# Top level modules:
-# 	Pointer_MUX
-# End time: 09:22:57 on Jul 04,2021, Elapsed time: 0:00:00
+# Start time: 14:24:46 on Jul 05,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/inesh/Documents/Singlecore-Hasini" C:/Users/inesh/Documents/Singlecore-Hasini/define.v 
+# End time: 14:24:46 on Jul 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src {C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/IRAM.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/inesh/Documents/Singlecore-Hasini {C:/Users/inesh/Documents/Singlecore-Hasini/Control_Unit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:58 on Jul 04,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src" C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/IRAM.v 
-# -- Compiling module IRAM
-# 
-# Top level modules:
-# 	IRAM
-# End time: 09:22:58 on Jul 04,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src {C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/DRAM.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:58 on Jul 04,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src" C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/DRAM.v 
-# -- Compiling module DRAM
-# 
-# Top level modules:
-# 	DRAM
-# End time: 09:22:58 on Jul 04,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src {C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/BUS_MUX.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:58 on Jul 04,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src" C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/BUS_MUX.v 
-# -- Compiling module BUS_MUX
-# 
-# Top level modules:
-# 	BUS_MUX
-# End time: 09:22:58 on Jul 04,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src {C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Module_RP_CP.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:58 on Jul 04,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src" C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Module_RP_CP.v 
-# -- Compiling module Module_RP_CP
-# 
-# Top level modules:
-# 	Module_RP_CP
-# End time: 09:22:58 on Jul 04,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src {C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Module_RegF.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:58 on Jul 04,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src" C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Module_RegF.v 
-# -- Compiling module Module_RegF
-# 
-# Top level modules:
-# 	Module_RegF
-# End time: 09:22:58 on Jul 04,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src {C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Module_Reg.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:58 on Jul 04,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src" C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Module_Reg.v 
-# -- Compiling module Module_Reg
-# 
-# Top level modules:
-# 	Module_Reg
-# End time: 09:22:59 on Jul 04,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src {C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/MemController.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:59 on Jul 04,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src" C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/MemController.v 
-# -- Compiling module MemController
-# 
-# Top level modules:
-# 	MemController
-# End time: 09:22:59 on Jul 04,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src {C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/define.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:59 on Jul 04,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src" C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/define.v 
-# End time: 09:22:59 on Jul 04,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src {C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/clkdiv.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:59 on Jul 04,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src" C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/clkdiv.v 
-# -- Compiling module clkdiv
-# 
-# Top level modules:
-# 	clkdiv
-# End time: 09:22:59 on Jul 04,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src {C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Modified.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:59 on Jul 04,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src" C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Modified.v 
-# -- Compiling module Modified
-# 
-# Top level modules:
-# 	Modified
-# End time: 09:22:59 on Jul 04,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src {C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/core.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:59 on Jul 04,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src" C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/core.v 
-# -- Compiling module core
-# 
-# Top level modules:
-# 	core
-# End time: 09:22:59 on Jul 04,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src {C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Control_Unit.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:59 on Jul 04,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src" C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Control_Unit.v 
+# Start time: 14:24:46 on Jul 05,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/inesh/Documents/Singlecore-Hasini" C:/Users/inesh/Documents/Singlecore-Hasini/Control_Unit.v 
 # -- Compiling module Control_Unit
-# ** Warning: C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/Control_Unit.v(128): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/inesh/Documents/Singlecore-Hasini/Control_Unit.v(128): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	Control_Unit
-# End time: 09:22:59 on Jul 04,2021, Elapsed time: 0:00:00
+# End time: 14:24:46 on Jul 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
-# vlog -vlog01compat -work work +incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src {C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/ALU.v}
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/inesh/Documents/Singlecore-Hasini {C:/Users/inesh/Documents/Singlecore-Hasini/Control_Unit_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:23:00 on Jul 04,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src" C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/ALU.v 
-# -- Compiling module ALU
+# Start time: 14:24:47 on Jul 05,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/inesh/Documents/Singlecore-Hasini" C:/Users/inesh/Documents/Singlecore-Hasini/Control_Unit_tb.v 
+# -- Compiling module Control_Unit_tb
 # 
 # Top level modules:
-# 	ALU
-# End time: 09:23:00 on Jul 04,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/db {C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/db/pll_altpll.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:23:00 on Jul 04,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/db" C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/db/pll_altpll.v 
-# -- Compiling module PLL_altpll
-# 
-# Top level modules:
-# 	PLL_altpll
-# End time: 09:23:00 on Jul 04,2021, Elapsed time: 0:00:00
+# 	Control_Unit_tb
+# End time: 14:24:47 on Jul 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src {C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/testbench.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:23:00 on Jul 04,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src" C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 09:23:00 on Jul 04,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  testbench
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
-# Start time: 09:23:00 on Jul 04,2021
-# Loading work.testbench
-# Loading work.Modified
-# Loading work.clkdiv
-# Loading work.IRAM
-# Loading altera_mf_ver.altsyncram
-# Loading work.DRAM
-# Loading work.MemController
-# Loading work.core
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  Control_Unit_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" Control_Unit_tb 
+# Start time: 14:24:47 on Jul 05,2021
+# Loading work.Control_Unit_tb
 # Loading work.Control_Unit
-# Loading work.BUS_MUX
-# Loading lpm_ver.lpm_mux
-# Loading work.Pointer_MUX
-# Loading work.Module_Reg
-# Loading work.Module_RP_CP
-# Loading work.Module_RegF
-# Loading work.ALU
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
 # 
 # add wave *
 # view structure
@@ -198,7 +51,15 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# Break key hit
-# Break in Module testbench at C:/Users/inesh/Documents/FPGA-processor-design-dev/FPGA-processor-design-dev/src/testbench.v line 15
-# End time: 09:31:00 on Jul 04,2021, Elapsed time: 0:08:00
+# ** Note: $stop    : C:/Users/inesh/Documents/Singlecore-Hasini/Control_Unit_tb.v(43)
+#    Time: 1500 ps  Iteration: 0  Instance: /Control_Unit_tb
+# Break in Module Control_Unit_tb at C:/Users/inesh/Documents/Singlecore-Hasini/Control_Unit_tb.v line 43
+add wave -position end  sim:/Control_Unit_tb/CU1/STATE
+add wave -position end  sim:/Control_Unit_tb/CU1/NXTSTATE
+restart
+run -all
+# ** Note: $stop    : C:/Users/inesh/Documents/Singlecore-Hasini/Control_Unit_tb.v(43)
+#    Time: 1500 ps  Iteration: 0  Instance: /Control_Unit_tb
+# Break in Module Control_Unit_tb at C:/Users/inesh/Documents/Singlecore-Hasini/Control_Unit_tb.v line 43
+# End time: 14:28:45 on Jul 05,2021, Elapsed time: 0:03:58
 # Errors: 0, Warnings: 0

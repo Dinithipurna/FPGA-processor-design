@@ -13,8 +13,10 @@ module Module_RegF
   output reg [7:0] dout = Sval;
   always @(dout or din)
 	begin
-		if(din <= dout) z <=1;         //For MC and MV we can use the negation of Z
-		else z <=0;
+		if(din <= dout) 
+      z <=1;         //For MC and MV we can use the negation of Z
+		else 
+      z <=0;
 	end
   always @(posedge Clk)
     begin

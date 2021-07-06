@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Jul 04 11:05:58 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : Singlecore-hasini
+Top-level Entity Name : Module_RP_CP
+Family : Cyclone IV E
+Device : EP4CE75F29C7
+Timing Models : Final
+Total logic elements : 28 / 75,408 ( < 1 % )
+    Total combinational functions : 20 / 75,408 ( < 1 % )
+    Dedicated logic registers : 16 / 75,408 ( < 1 % )
+Total registers : 16
+Total pins : 20 / 427 ( 5 % )
+Total virtual pins : 0
+Total memory bits : 0 / 2,810,880 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 400 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

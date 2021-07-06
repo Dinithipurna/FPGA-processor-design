@@ -1,8 +1,0 @@
-v1
-DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,core:core0|ALU:ALUAC|lpm_mult:Mult0|mult_4et:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,core:core1|ALU:ALUAC|lpm_mult:Mult0|mult_4et:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,core:core2|ALU:ALUAC|lpm_mult:Mult0|mult_4et:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,core:core3|ALU:ALUAC|lpm_mult:Mult0|mult_4et:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,core:core4|ALU:ALUAC|lpm_mult:Mult0|mult_4et:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,core:core5|ALU:ALUAC|lpm_mult:Mult0|mult_4et:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,core:core6|ALU:ALUAC|lpm_mult:Mult0|mult_4et:auto_generated|mac_out2,

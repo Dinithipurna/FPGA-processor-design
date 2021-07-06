@@ -1,0 +1,237 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "busy",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_OP[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_OP[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_OP[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus_Select[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus_Select[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus_Select[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus_Select[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PCtrl[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PCtrl[1]",
+					"strict" : false
+				},
+				{
+					"name" : "WRT_en[0]",
+					"strict" : false
+				},
+				{
+					"name" : "WRT_en[1]",
+					"strict" : false
+				},
+				{
+					"name" : "WRT_en[3]",
+					"strict" : false
+				},
+				{
+					"name" : "WRT_en[4]",
+					"strict" : false
+				},
+				{
+					"name" : "WRT_en[5]",
+					"strict" : false
+				},
+				{
+					"name" : "WRT_en[6]",
+					"strict" : false
+				},
+				{
+					"name" : "WRT_en[7]",
+					"strict" : false
+				},
+				{
+					"name" : "WRT_en[9]",
+					"strict" : false
+				},
+				{
+					"name" : "WRT_en[10]",
+					"strict" : false
+				},
+				{
+					"name" : "WRT_en[11]",
+					"strict" : false
+				},
+				{
+					"name" : "WRT_en[12]",
+					"strict" : false
+				},
+				{
+					"name" : "WRT_en[13]",
+					"strict" : false
+				},
+				{
+					"name" : "INC_en[0]",
+					"strict" : false
+				},
+				{
+					"name" : "INC_en[2]",
+					"strict" : false
+				},
+				{
+					"name" : "INC_en[3]",
+					"strict" : false
+				},
+				{
+					"name" : "INC_en[4]",
+					"strict" : false
+				},
+				{
+					"name" : "INC_en[5]",
+					"strict" : false
+				},
+				{
+					"name" : "INC_en[8]",
+					"strict" : false
+				},
+				{
+					"name" : "INC_en[13]",
+					"strict" : false
+				},
+				{
+					"name" : "RST_en[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RST_en[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RST_en[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RST_en[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RST_en[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RST_en[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RST_en[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RST_en[9]",
+					"strict" : false
+				},
+				{
+					"name" : "RST_en[10]",
+					"strict" : false
+				},
+				{
+					"name" : "RST_en[11]",
+					"strict" : false
+				},
+				{
+					"name" : "RST_en[12]",
+					"strict" : false
+				},
+				{
+					"name" : "RST_en[13]",
+					"strict" : false
+				},
+				{
+					"name" : "MEMCtrl[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MEMCtrl[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MEMCtrl[2]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "dacq",
+					"strict" : false
+				},
+				{
+					"name" : "INS[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Z2",
+					"strict" : false
+				},
+				{
+					"name" : "INS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Z1",
+					"strict" : false
+				},
+				{
+					"name" : "INS[7]",
+					"strict" : false
+				},
+				{
+					"name" : "INS[5]",
+					"strict" : false
+				},
+				{
+					"name" : "INS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "INS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "iacq",
+					"strict" : false
+				},
+				{
+					"name" : "INS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "INS[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

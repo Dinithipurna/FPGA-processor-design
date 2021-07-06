@@ -1,0 +1,44 @@
+module Module_RP_CP_tb();
+  reg Wen, Clk, RST, INC;
+  reg [7:0] BusOut;
+  wire[7:0] dout=0;
+  reg[7:0] rbase;
+  
+ initial begin
+  Wen<=1'd0;
+  Clk<=1'd0;
+  RST<=1'd0;
+  INC<=1'd0;
+  BusOut<=8'd15;
+  rbase<=8'd0;
+  
+  forever begin
+	#20
+	Clk<= ~Clk;
+  end
+end
+  
+ 
+  
+
+
+
+ Module_RP_CP dut(.Wen(Wen), .BusOut(BusOut), .Clk(Clk), .RST(RST), .INC(INC), .dout(dout));
+ 
+ 
+ initial begin
+ #20
+ 
+ @(posedge Clk);
+ Wen<=1'b1;
+ 
+ @(posedge Clk);
+ Wen<=1'b0;
+ INC<=1'b1;
+ 
+ @(posedge Clk);
+ INC<=1'b0;
+ RST<=1'b1;
+ 
+ 
+ end

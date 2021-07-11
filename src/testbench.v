@@ -16,10 +16,10 @@ module testbench();
         end
     end
 
-    Modified8 mod1(.CLOCK_50(clk));
+    Modified3 mod1(.CLOCK_50(clk));
 
     initial begin
-        #(500000);
+        #(20000000);
         $stop;
     end
 

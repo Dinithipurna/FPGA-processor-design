@@ -8,15 +8,15 @@ module IMemController
 (
 	// Input Ports
 	input [ncores-1:0] rden,wren,
-	input wire [31:0] Address,
-	input wire [31:0] Din ,
+	input wire [15:0] Address,
+	input wire [15:0] Din ,
 	input [7:0] RAMq,
 	input clk,
 	
 
 	// Output Ports
 	output reg [ncores-1:0] acq = 0,
-	output [31:0] Dq,
+	output [15:0] Dq,
 	output reg [7:0] RAMAddress = 8'd0,
 	output reg [7:0] RAMDin = 8'd0,
 	output reg RAMwren = 1'd0

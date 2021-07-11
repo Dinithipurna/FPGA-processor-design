@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY Modified4
+set_global_assignment -name TOP_LEVEL_ENTITY singlecore
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 19.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:55:57  DECEMBER 01, 2020"
 set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
@@ -66,6 +66,8 @@ set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "10 s" -section_id testbe
 set_global_assignment -name EDA_TEST_BENCH_FILE ../../src/testbench.v -section_id testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE ../../src/DRAM_Init.hex -section_id testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE ../../src/IRAM_new_algo.hex -section_id testbench
+set_global_assignment -name VERILOG_FILE ../../src/IMemController3.v
+set_global_assignment -name VERILOG_FILE ../../src/IMemController.v
 set_global_assignment -name VERILOG_FILE ../../src/Modified8.v
 set_global_assignment -name VERILOG_FILE ../../src/MemController8.v
 set_global_assignment -name VERILOG_FILE ../../src/IMemController8.v

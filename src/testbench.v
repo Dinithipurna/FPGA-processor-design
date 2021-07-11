@@ -16,7 +16,7 @@ module testbench();
         end
     end
 
-    singlecore mod1(.CLOCK_50(clk));
+    singlecore dut(.CLOCK_50(clk));
 
     initial begin
         #(500000);

@@ -76,9 +76,9 @@ MemController3 drammemc(
 );
 
 
-MemController3 irammemc(
-	.rden({Mem_Ctrl2[2],Mem_Ctrl1[2],Mem_Ctrl0[2]}),
-	.wren({Mem_Ctrl2[3],Mem_Ctrl1[3],Mem_Ctrl0[3]}),
+IMemController3 irammemc(
+	.rden({Mem_Ctrl2[0],Mem_Ctrl1[0],Mem_Ctrl0[0]}),
+	.wren({Mem_Ctrl2[1],Mem_Ctrl1[1],Mem_Ctrl0[1]}),
 	.Address({IAddress2,IAddress1,IAddress0}),
 	.Din({8'd0,8'd0,8'd0}),
 	.RAMq(Idin),

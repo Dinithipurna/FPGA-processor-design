@@ -3,24 +3,24 @@ module MemController3
 #(
 	// Parameter Declarations
 	parameter ncores = 3
-)
+)(rden,wren,Address,Din,RAMq,clk,acq,Dq,RAMAddress,RAMDin,RAMwren);
 
-(
+//(
 	// Input Ports
-	input [ncores-1:0] rden,wren,
-	input wire [23:0] Address,
-	input wire [23:0] Din ,
-	input [7:0] RAMq,
-	input clk,
+	input [ncores-1:0] rden,wren;//,
+	input wire [23:0] Address;//,
+	input wire [23:0] Din;// ,
+	input [7:0] RAMq;//,
+	input clk;//,
 	
 
 	// Output Ports
-	output reg [ncores-1:0] acq = 0,
-	output [23:0] Dq ,
-	output reg [7:0] RAMAddress = 8'd0,
-	output reg [7:0] RAMDin = 8'd0,
-	output reg RAMwren = 1'd0
-);
+	output reg [ncores-1:0] acq = 0;//,
+	output [23:0] Dq ;//,
+	output reg [7:0] RAMAddress = 8'd0;//,
+	output reg [7:0] RAMDin = 8'd0;//,
+	output reg RAMwren = 1'd0;
+//);
 
 	// Module Item(s)
 

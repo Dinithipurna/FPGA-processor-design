@@ -1,0 +1,4 @@
+Warning (10268): Verilog HDL information at MemController8.v(242): always construct contains both blocking and non-blocking assignments File: C:/Users/inesh/Documents/CSD-Project/SIMD/FPGA-processor-design/src/MemController8.v Line: 242
+Warning (10268): Verilog HDL information at MemController4.v(112): always construct contains both blocking and non-blocking assignments File: C:/Users/inesh/Documents/CSD-Project/SIMD/FPGA-processor-design/src/MemController4.v Line: 112
+Warning (10268): Verilog HDL information at MemController3.v(91): always construct contains both blocking and non-blocking assignments File: C:/Users/inesh/Documents/CSD-Project/SIMD/FPGA-processor-design/src/MemController3.v Line: 91
+Warning (10268): Verilog HDL information at Control_Unit.v(21): always construct contains both blocking and non-blocking assignments File: C:/Users/inesh/Documents/CSD-Project/SIMD/FPGA-processor-design/src/Control_Unit.v Line: 21

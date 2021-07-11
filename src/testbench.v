@@ -16,7 +16,7 @@ module testbench();
         end
     end
 
-    Modified8 mod1(.CLOCK_50(clk));
+    singlecore mod1(.CLOCK_50(clk));
 
     initial begin
         #(500000);
